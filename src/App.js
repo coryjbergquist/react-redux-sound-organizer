@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+
+        <header>
           <p>
-            Edit to reload.
+            {this.props.cheese}
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>
+          {this.props.sounds.sound}
+          </p>
         </header>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({ cheese: state.cheese, sounds: state.sounds})
+
+
+export default connect(mapStateToProps)(App)

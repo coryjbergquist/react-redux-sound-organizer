@@ -1,4 +1,4 @@
-export default function soundsReducer(state= {sounds: [{sound1: "pew pew"}, {sound2: "boom boom"}]}, action) {
+export default function soundsReducer(state= {sound: "boom"}, action) {
   switch ( action.type ) {
     case 'LOADING_SOUNDS':
       return Object.assign({}, state, {loading: true})
