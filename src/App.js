@@ -9,10 +9,13 @@ class App extends Component {
 
         <header>
           <p>
-            {this.props.cheese}
+            {this.props.cheese.cheese} //why isn't this rendering?
           </p>
           <p>
           {this.props.sounds.sound}
+          </p>
+          <p>
+          {this.props.sounds.cheese}
           </p>
         </header>
       </div>
