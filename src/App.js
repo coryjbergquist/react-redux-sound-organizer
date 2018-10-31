@@ -7,15 +7,17 @@ class App extends Component {
     return (
       <div className="App">
 
-        <header>
+      <h1>Here are sounds!</h1>
+
+        <header className="App-header">
           <p>
-            {this.props.cheese.cheese} //why isn't this rendering?
+            {this.props.countDown.countDown}
           </p>
           <p>
-          {this.props.sounds.sound}
+            {this.props.sounds.sound}
           </p>
           <p>
-          {this.props.sounds.cheese}
+            {this.props.sounds.cheese}
           </p>
         </header>
       </div>
@@ -23,7 +25,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({ cheese: state.cheese, sounds: state.sounds})
+const mapStateToProps = state => ({ countDown: state.countDown, sounds: state.sounds})
 
 
 export default connect(mapStateToProps)(App)

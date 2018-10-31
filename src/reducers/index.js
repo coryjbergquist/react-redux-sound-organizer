@@ -3,7 +3,7 @@ import soundsReducer from './sounds_reducer'
 import manageSounds from './manage_sounds'
 
 const rootReducer = combineReducers({
-  cheese: manageSounds,
+  countDown: manageSounds,
   sounds: soundsReducer
 })
 
