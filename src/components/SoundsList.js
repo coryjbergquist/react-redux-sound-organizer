@@ -11,9 +11,6 @@ const SoundsList = ({ sounds }) => {
 
   const renderCountDown = sounds.countDown
 
-
-
-
   return (
     <div>
       <div>
