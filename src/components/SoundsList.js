@@ -9,9 +9,20 @@ const SoundsList = ({ sounds }) => {
     //make link to each sound to show description etc.
   );
 
+  const renderCountDown = sounds.countDown
+
+
+
+
   return (
     <div>
-      {renderSounds}
+      <div>
+        {renderSounds}
+
+      </div>
+      <div>
+        {renderCountDown}
+      </div>
     </div>
   );
 };

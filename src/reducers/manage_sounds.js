@@ -1,4 +1,4 @@
-export default function manageSounds(state= {countDown: "here's the beat:"}, action) {
+export default function manageSounds(state= {countDown: "Here's the count down:"}, action) {
   switch ( action.type ) {
     case 'LOADING_SOUNDS':
       return Object.assign({}, state, {loading: true})
