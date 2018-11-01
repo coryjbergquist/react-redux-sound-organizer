@@ -11,12 +11,13 @@ class App extends Component {
       <h1>Here are sounds!</h1>
 
         <header className="App-header">
+
+        <div>
+          <p>list of sounds</p>
+          <SoundsList sounds={this.props.sounds.sound} />
+        </div>
           <p>
             {this.props.countDown.countDown}
-          </p>
-          <p>
-            list of sounds
-            <SoundsList sounds={this.props.sounds.sound} />
           </p>
           <p>
             {this.props.sounds.cheese}
