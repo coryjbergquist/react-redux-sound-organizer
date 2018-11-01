@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import SoundsListContainer from './containers/SoundsListContainer';
+import AddSounds from './components/AddSounds';
 
 class App extends Component {
   render() {
@@ -16,9 +17,16 @@ class App extends Component {
           <p>list of sounds</p>
           <SoundsListContainer />
         </div>
+
+        <div>
           <p>
-            This is just plain text in a p tag.
+            This will be an input
           </p>
+          <p>
+            <AddSounds />
+          </p>
+        </div>
+
           <p>
             This is also just plain text in a p tag.
           </p>

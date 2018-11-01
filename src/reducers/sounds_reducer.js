@@ -4,13 +4,13 @@ export default function soundsReducer(state= {sound: ["boom", "bam"], cheese: "c
       //make action.sound include the new sound object
     case 'ADD_SOUND':
      return { sound: state.sound.concat(action.payload.sound) };
-      return {
-        ...state,
-        sound: [
-          ...state.sound,
-          action.sound
-        ]
-      };
+      // return {
+      //   ...state,
+      //   sound: [
+      //     ...state.sound,
+      //     action.sound
+      //   ]
+      // };
 
       //REMOVE SOUND by filtering all sounds and returning everything
       //except the one that matches
