@@ -19,6 +19,7 @@ class AddSounds extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addSound(this.state)
+
   }
 
 
@@ -37,11 +38,8 @@ class AddSounds extends Component {
   }
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addSound: formData => dispatch({ type: 'ADD_SOUND', payload: formData })
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  addSound: formData => dispatch({ type: 'ADD_SOUND', payload: formData })
+})
 
-
-export default connect()(AddSounds);
+export default connect(null, mapDispatchToProps)(AddSounds);
