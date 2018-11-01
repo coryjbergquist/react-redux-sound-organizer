@@ -27,19 +27,21 @@ class AddSounds extends Component {
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Add Sound</label>
+          <label>Add Sound: </label>
           <input type="text" onChange={this.handleChange} value={this.state.sound} />
           <input type="submit" />
         </form>
+        {this.state.sound}
       </div>
     );
   }
 };
 
-mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
   return {
-    addSound: formData => dispatch({ type: "ADD_SOUND", payload: formData })
+    addSound: formData => dispatch({ type: 'ADD_SOUND', payload: formData })
   }
 }
 
-export default connect(null, mapDispatchToProps)(AddSounds);
+
+export default connect()(AddSounds);
