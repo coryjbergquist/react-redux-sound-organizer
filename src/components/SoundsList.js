@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SoundsList = ({ sounds }) => {
 
-  const renderSounds = sounds.map(sound =>
+  const renderSounds = sounds.sound.map(sound =>
     <div key={sound}>{sound}</div>
     //<Link style={{ marginRight: '12px' }} key={sound.id} to={`/pets/${pet.id}`}>{pet.name}</Link>
     //make link to each sound to show description etc.
