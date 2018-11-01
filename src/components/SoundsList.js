@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SoundsList = ({ sounds }) => {
+const SoundsList = ({ sounds, countDown }) => {
 
   const renderSounds = sounds.sound.map(sound =>
     <div key={sound}>{sound}</div>
@@ -9,7 +9,7 @@ const SoundsList = ({ sounds }) => {
     //make link to each sound to show description etc.
   );
 
-  const renderCountDown = sounds.countDown
+  const renderCountDown = countDown.countDown
 
   return (
     <div>

@@ -20,7 +20,7 @@ class App extends Component {
             {this.props.countDown.countDown}
           </p>
           <p>
-            Nothing anymore
+            This is just plain text in a p tag.
           </p>
         </header>
       </div>
