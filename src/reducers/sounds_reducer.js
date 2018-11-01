@@ -1,13 +1,21 @@
 export default function soundsReducer(state= {sound: ["boom", "bam"], cheese: "chickapow.2"}, action) {
   switch ( action.type ) {
-      //add new sound
+      //ADD SOUND
+      //make action.sound include the new sound object
     case 'ADD_SOUND':
-      return {sounds: sound}
+      return {
+        ...state,
+        sound: [
+          ...state.sound,
+          action.sound
+        ]
+      };
 
-      //remove sound by filtering all sounds and returning everything
+      //REMOVE SOUND by filtering all sounds and returning everything
       //except the one that matches
       //will return a new state that doesn't include the matching sound.id
-      //must assign an id to all sounds, and create soundIndex? 
+      //must assign an id to all sounds, and create soundIndex?
+      //action.id must include the sound id and maybe other stuff?
     case 'REMOVE_SOUND':
       const allSounds = state.sounds.findIndex(sound => sound.id === action.id);
       return {
