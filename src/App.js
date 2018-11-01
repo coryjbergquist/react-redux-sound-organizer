@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import SoundsList from './components/SoundsList';
+import SoundsListContainer from './containers/SoundsListContainer';
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
             {this.props.countDown.countDown}
           </p>
           <p>
-            {this.props.sounds.cheese}
+            Nothing anymore
           </p>
         </header>
       </div>

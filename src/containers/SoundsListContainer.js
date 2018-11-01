@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import  SoundsList  from '../components/SoundsList';
 
 class SoundsListContainer extends React.Component {
   state = { sounds: [] };
 
     render() {
-      return <SoundsList sounds={this.state.sounds} />;
+      return <SoundsList sounds={this.props.sounds} />;
     }
 }
 
