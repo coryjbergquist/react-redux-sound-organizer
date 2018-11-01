@@ -17,10 +17,10 @@ class App extends Component {
           <SoundsListContainer />
         </div>
           <p>
-            {this.props.countDown.countDown}
+            This is just plain text in a p tag.
           </p>
           <p>
-            This is just plain text in a p tag.
+            This is also just plain text in a p tag.
           </p>
         </header>
       </div>
@@ -28,7 +28,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({ countDown: state.countDown})
+const mapStateToProps = state => ({})
 
 
 export default connect(mapStateToProps)(App)
