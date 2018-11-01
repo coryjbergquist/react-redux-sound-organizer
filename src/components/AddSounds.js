@@ -19,6 +19,9 @@ class AddSounds extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addSound(this.state)
+    this.setState({
+      sound: ""
+    });
 
   }
 
