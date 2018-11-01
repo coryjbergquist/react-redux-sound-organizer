@@ -17,7 +17,7 @@ export default function soundsReducer(state= {sound: ["boom", "bam"], cheese: "c
       //must assign an id to all sounds, and create soundIndex?
       //action.id must include the sound id and maybe other stuff?
     case 'REMOVE_SOUND':
-      const allSounds = state.sounds.findIndex(sound => sound.id === action.id);
+      const soundIndex = state.sounds.findIndex(sound => sound.id === action.id);
       return {
         ...state,
         sound: [
