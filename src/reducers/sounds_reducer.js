@@ -3,6 +3,7 @@ export default function soundsReducer(state= {sound: ["boom", "bam"], cheese: "c
       //ADD SOUND
       //make action.sound include the new sound object
     case 'ADD_SOUND':
+     return { sound: state.sound.concat(action.payload.sound) };
       return {
         ...state,
         sound: [
