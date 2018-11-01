@@ -1,20 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const SoundsShow = ({ sound }) =>
-  <div className="col-md-8">
-    <h2>{pet.name}</h2>
-    <p>{pet.description}</p>
-  </div>;
+class SoundsListContainer extends React.Component {
+  state = { sounds: [] };
 
-const mapStateToProps = (state, ownProps) => {
-  const sound = state.pets.find(pet => pet.id === +ownProps.match.params.petId)
+    render() {
+      return <SoundsList sounds={this.state.sounds} />;
+    }
+}
 
-  if (pet) {
-    return { pet }
-  } else {
-    return { pet: {} }
-  }
-};
 
-export default connect(mapStateToProps)(PetsShow);
+const mapStateToProps = state => ({sounds: state.sounds})
+
+
+export default connect(mapStateToProps)(SoundsListContainer);

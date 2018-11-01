@@ -14,7 +14,7 @@ class App extends Component {
 
         <div>
           <p>list of sounds</p>
-          <SoundsList sounds={this.props.sounds.sound} />
+          <SoundsListContainer />
         </div>
           <p>
             {this.props.countDown.countDown}
@@ -28,7 +28,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({ countDown: state.countDown, sounds: state.sounds})
+const mapStateToProps = state => ({ countDown: state.countDown})
 
 
 export default connect(mapStateToProps)(App)

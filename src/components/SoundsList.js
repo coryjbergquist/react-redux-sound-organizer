@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SoundsList = ({ sounds }) => {
-  debugger
 
   const renderSounds = sounds.map(sound =>
     <div key={sound}>{sound}</div>
