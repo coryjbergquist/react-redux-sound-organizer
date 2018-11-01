@@ -15,7 +15,7 @@ class App extends Component {
             {this.props.countDown.countDown}
           </p>
           <p>
-            this of sounds
+            list of sounds
             <SoundsList sounds={this.props.sounds.sound} />
           </p>
           <p>
