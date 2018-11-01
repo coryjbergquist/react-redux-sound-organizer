@@ -10,6 +10,7 @@ class SoundsPageContainer extends React.Component {
 
 }
 
-const mapStateToProps = state => ({sounds: state.sounds, countDown: state.countDown})
+//const mapStateToProps = (state, ownProps) => {
+  //const sound = state.sounds.find(sound => sound.id === +ownProps.match.params.sound.id)
 
 export default connect(mapStateToProps)(SoundsListContainer);
