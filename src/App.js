@@ -22,7 +22,6 @@ class App extends Component {
 
         <div>
           <p>
-            This will be an input
           </p>
           <div>
             <AddSounds />

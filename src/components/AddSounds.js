@@ -6,13 +6,14 @@ class AddSounds extends Component {
   constructor() {
     super();
     this.state = {
-      sound: ""
+      name: "",
+      description: "",
     }
   }
 
   handleChange = event => {
     this.setState({
-      sound: event.target.value
+      name: event.target.value
     });
   }
 
@@ -20,7 +21,7 @@ class AddSounds extends Component {
     event.preventDefault();
     this.props.addSound(this.state)
     this.setState({
-      sound: ""
+      name: ""
     });
   }
 
@@ -31,10 +32,10 @@ class AddSounds extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>Add Sound: </label>
-          <input type="text" onChange={this.handleChange} value={this.state.sound} />
+          <input type="text" onChange={this.handleChange} value={this.state.name} />
           <input type="submit" />
         </form>
-        {this.state.sound}
+        {this.state.name}
       </div>
     );
   }

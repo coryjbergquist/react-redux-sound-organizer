@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SoundsList = (props) => {
   const renderSounds = props.sounds.sounds.map(sound =>
-    <li key={sound.id}>{sound.sound}
+    <li key={sound.id}>{sound.name}
       <p>
         <button onClick={() => props.delete(sound.id)}>DELETE</button>
       </p>
