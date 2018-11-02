@@ -3,7 +3,7 @@ export const cuidFn = cuid;
 
 export default function soundsReducer(state= {
   sounds: [],
-  comments: "cheese",
+  comments: [{text: "cheese"}],
 }, action) {
   switch ( action.type ) {
       //ADD_SOUND
