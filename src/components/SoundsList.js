@@ -13,10 +13,9 @@ const SoundsList = ({ sounds, countDown }) => {
 
   return (
     <div>
-      <div>
+      <li>
         {renderSounds}
-
-      </div>
+      </li>
       <div>
         {renderCountDown}
       </div>
