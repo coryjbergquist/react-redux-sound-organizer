@@ -3,7 +3,7 @@ export const cuidFn = cuid;
 
 export default function soundsReducer(state= {
   sounds: [],
-  comments: ["butts"],
+  comments: [],
 }, action) {
   switch ( action.type ) {
       //ADD_SOUND
@@ -23,6 +23,7 @@ export default function soundsReducer(state= {
       return { ...state,
         comments: [...state.comments, comment]
     }
+
 
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':

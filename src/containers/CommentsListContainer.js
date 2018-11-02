@@ -5,7 +5,8 @@ import  CommentsList  from '../components/CommentsList';
 class CommentsListContainer extends React.Component {
 
   render() {
-    return <CommentsList comments={this.props.comments} delete={this.props.delete} />;
+    debugger
+    return <CommentsList comments={props.comments} delete={this.props.delete} />;
   }
 
 }
