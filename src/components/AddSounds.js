@@ -6,8 +6,8 @@ class AddSounds extends Component {
   constructor() {
     super();
     this.state = {
-      sound: '',
-    };
+      sound: ""
+    }
   }
 
   handleChange = event => {
@@ -22,7 +22,6 @@ class AddSounds extends Component {
     this.setState({
       sound: ""
     });
-
   }
 
 

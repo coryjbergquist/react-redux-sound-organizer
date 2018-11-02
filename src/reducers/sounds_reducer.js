@@ -3,14 +3,11 @@ export default function soundsReducer(state= {sound: ["boom", "bam"]}, action) {
       //ADD SOUND
       //make action.sound include the new sound object
     case 'ADD_SOUND':
-     return { sound: state.sound.concat(action.payload.sound) };
-      // return {
-      //   ...state,
-      //   sound: [
-      //     ...state.sound,
-      //     action.sound
-      //   ]
-      // };
+      const sound = {
+        //id: Math.random()*10000000000000000,
+        sound: action.payload.sound
+      }
+     return { sound: state.sound.concat(sound.sound) };
 
       //REMOVE SOUND by filtering all sounds and returning everything
       //except the one that matches
