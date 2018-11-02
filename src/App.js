@@ -15,9 +15,9 @@ class App extends Component {
 
         <div>
           <p>list of sounds</p>
-          <ul>
+          
             <SoundsListContainer />
-          </ul>
+          
         </div>
 
         <div>

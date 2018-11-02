@@ -12,14 +12,9 @@ const SoundsList = ({ sounds, countDown }) => {
   const renderCountDown = countDown.countDown
 
   return (
-    <div>
-
-        {renderSounds}
-
-      <div>
-        {renderCountDown}
-      </div>
-    </div>
+    <ul>
+      {renderSounds}
+    </ul>
   );
 };
 
