@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SoundsList = ({ sounds, countDown }) => {
+const SoundsList = ({ sounds, countDown, props }) => {
 
   const renderSounds = sounds.sound.map(sound =>
     <li>{sound}</li>
