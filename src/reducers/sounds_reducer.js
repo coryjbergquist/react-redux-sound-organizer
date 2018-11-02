@@ -24,6 +24,10 @@ export default function soundsReducer(state= {
         comments: [...state.comments, comment]
     }
 
+    case 'DELETE_COMMENT':
+      const comments = state.comments.filter(comment => comment.id !== action.payload);
+      return {...state, comments}
+
 
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':

@@ -32,7 +32,7 @@ const mapStateToProps = state => ({comments: state.sounds.comments})
 
 const mapDispatchToProps = dispatch => {
   return {
-    delete: soundObject => dispatch({type: 'DELETE_SOUND', payload: soundObject })
+    delete: commentObject => dispatch({type: 'DELETE_COMMENT', payload: commentObject })
   }
 }
 
