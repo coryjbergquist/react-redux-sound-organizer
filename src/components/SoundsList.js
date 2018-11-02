@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentsListContainer from './CommentsList'
 
 const SoundsList = (props) => {
   const renderSounds = props.sounds.sounds.map(sound =>
     <li key={sound.id}>{sound.name}: {sound.description}
       <p>
-        <button onClick={() => props.delete(sound.id)}>DELETE</button>
+        <button onClick={() => props.delete(sound.id)}>DELETE </button>
+      </p>
+      <p>
+        <CommentsListContainer sound={sound}/>
       </p>
     </li>
     //<Link style={{ marginRight: '12px' }} key={sound.id} to={`/pets/${pet.id}`}>{pet.name}</Link>
