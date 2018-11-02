@@ -5,11 +5,17 @@ import  SoundsList  from '../components/SoundsList';
 class SoundsListContainer extends React.Component {
 
   render() {
-    return <SoundsList sounds={this.props.sounds} countDown={this.props.countDown} />;
+    return <SoundsList sounds={this.props.sounds} delete={this.props.delete} countDown={this.props.countDown} />;
   }
 
 }
 
 const mapStateToProps = state => ({sounds: state.sounds, countDown: state.countDown})
 
-export default connect(mapStateToProps)(SoundsListContainer);
+const mapDispatchToProps = dispatch => {
+  return {
+    delete: soundObject => dispatch({type: 'DELETE_SOUND', payload: soundObject })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SoundsListContainer);

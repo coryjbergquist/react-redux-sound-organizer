@@ -13,7 +13,7 @@ const SoundsList = ({ sounds, countDown }) => {
 
   return (
     <ul>
-      {renderSounds}
+      <span>{renderSounds}</span> <button onClick={() => props.delete(props.sound)}>DELETE</button>
     </ul>
   );
 };
