@@ -3,7 +3,7 @@ export const cuidFn = cuid;
 
 export default function soundsReducer(state= {
   sounds: [],
-  comments: [{text: "cheese"}],
+  comments: [],
 }, action) {
   switch ( action.type ) {
       //ADD_SOUND
@@ -19,7 +19,7 @@ export default function soundsReducer(state= {
 
       //connect comment to sound through soundId
     case 'ADD_COMMENT':
-      const comment = { text: action.comment.text, soundId: action.comment.soundId, id: cuidFn() };
+      const comment = { text: action.payload.text, soundId: action.payload.soundId, id: cuidFn() };
       return { ...state,
         comments: [...state.comments, comment]
     }

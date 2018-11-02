@@ -10,10 +10,10 @@ class CommentsListContainer extends React.Component {
     return (
 
       <div>
-    {/*  <AddComments
-            addComment={this.props.addComment}
-            soundId={this.props.sound.id}
-          />         */}
+        <AddComments
+          addComment={this.props.addComment}
+          soundId={this.props.sound.id}
+        />
 
 
         <CommentsList
@@ -21,9 +21,9 @@ class CommentsListContainer extends React.Component {
           // soundId={this.props.sound.id}
           delete={this.props.delete}
         />
-        </div>
-      );
 
+      </div>
+    );
   }
 }
 
