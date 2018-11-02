@@ -1,14 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import  CommentsList  from '../components/CommentsList';
+import AddComments from '../components/AddComments'
 
 class CommentsListContainer extends React.Component {
 
   render() {
-    debugger
-    return <CommentsList comments={props.comments} delete={this.props.delete} />;
-  }
 
+    return (
+      <div>
+        <AddComments
+          addComment={this.props.addComment}
+          soundId={this.props.sound.id}
+        />
+
+        <CommentsList
+          comments={this.props.comments}
+          soundId={this.props.sound.id}
+          delete={this.props.delete}
+        />;
+
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = state => ({comments: state.comments})

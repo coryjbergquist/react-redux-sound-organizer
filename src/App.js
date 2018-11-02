@@ -3,7 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import SoundsListContainer from './containers/SoundsListContainer';
 import AddSounds from './components/AddSounds';
-import AddComments from './components/AddComments';
+import CommentsListContainer from './containers/CommentsListContainer';
 
 class App extends Component {
   render() {
@@ -22,11 +22,9 @@ class App extends Component {
         </div>
 
         <div>
-          <p>
-          </p>
           <div>
             <AddSounds />
-            <AddComments />
+            <CommentsListContainer />
           </div>
         </div>
 
