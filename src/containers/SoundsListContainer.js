@@ -10,7 +10,7 @@ class SoundsListContainer extends React.Component {
 
 }
 
-const mapStateToProps = state => ({sounds: state.sounds, countDown: state.countDown})
+const mapStateToProps = state => ({sounds: state.sounds})
 
 const mapDispatchToProps = dispatch => {
   return {

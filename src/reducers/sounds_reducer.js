@@ -19,16 +19,10 @@ export default function soundsReducer(state= {
       //must assign an id to all sounds, and create soundIndex?
       //action.id must include the sound id and maybe other stuff?
     case 'DELETE_SOUND':
-    console.log(action.payload)
-      // const soundIndex = state.sounds.findIndex(sound => sound.id === action.id);
-      // return {
-      //   ...state,
-      //   sound: [
-      //     ...state.sound.slice(0, soundIndex),
-      //     ...state.sound.slice(soundIndex +1)
-      //   ]
-      // };
-      return {sound: state.sound.filter(sound => sound !== action.payload)}
+
+      const sounds = state.sounds.filter(sound => sound.id !== action.payload);
+      return {...state, sounds}
+
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':
       return Object.assign({}, state, {loading: true})

@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SoundsList = (props) => {
-  const renderSounds = props.sounds.sound.map(sound =>
-    <li key={sound}>{sound}
+  const renderSounds = props.sounds.sounds.map(sound =>
+    <li key={sound.id}>{sound.sound}
       <p>
-        <button onClick={() => props.delete(sound)}>DELETE</button>
+        <button onClick={() => props.delete(sound.id)}>DELETE</button>
       </p>
     </li>
     //<Link style={{ marginRight: '12px' }} key={sound.id} to={`/pets/${pet.id}`}>{pet.name}</Link>
