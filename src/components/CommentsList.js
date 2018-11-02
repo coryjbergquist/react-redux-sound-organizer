@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CommentsList = (props) => {
+  debugger
   const renderComments = props.comments.map(comment =>
     <li key={comment.id}>{comment.text}
       <p>

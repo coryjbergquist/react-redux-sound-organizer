@@ -9,6 +9,7 @@ class CommentsListContainer extends React.Component {
 
     return (
       <div>
+
         <AddComments
           addComment={this.props.addComment}
           soundId={this.props.sound.id}
@@ -26,6 +27,7 @@ class CommentsListContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({comments: state.comments})
+
 
 const mapDispatchToProps = dispatch => {
   return {

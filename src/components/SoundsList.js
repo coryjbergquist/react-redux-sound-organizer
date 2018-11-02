@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CommentsListContainer from './CommentsList'
+import CommentsListContainer from '../containers/CommentsListContainer'
 
 const SoundsList = (props) => {
+
   const renderSounds = props.sounds.sounds.map(sound =>
     <li key={sound.id}>{sound.name}: {sound.description}
       <p>

@@ -3,7 +3,6 @@ import './App.css';
 import { connect } from 'react-redux';
 import SoundsListContainer from './containers/SoundsListContainer';
 import AddSounds from './components/AddSounds';
-import CommentsListContainer from './containers/CommentsListContainer';
 
 class App extends Component {
   render() {
@@ -16,16 +15,11 @@ class App extends Component {
 
         <div>
           <p>list of sounds</p>
-
-            <SoundsListContainer />
-
+          <SoundsListContainer />
         </div>
 
         <div>
-          <div>
-            <AddSounds />
-            <CommentsListContainer />
-          </div>
+          <AddSounds />
         </div>
 
           <p>
