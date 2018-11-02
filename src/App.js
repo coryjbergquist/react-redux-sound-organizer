@@ -15,18 +15,18 @@ class App extends Component {
 
         <div>
           <p>list of sounds</p>
-          
+
             <SoundsListContainer />
-          
+
         </div>
 
         <div>
           <p>
             This will be an input
           </p>
-          <p>
+          <div>
             <AddSounds />
-          </p>
+          </div>
         </div>
 
           <p>
