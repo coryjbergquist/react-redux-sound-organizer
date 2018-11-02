@@ -18,7 +18,7 @@ class CommentsListContainer extends React.Component {
 
         <CommentsList
           comments={this.props.comments}
-          // soundId={this.props.sound.id}
+          soundId={this.props.sound.id}
           delete={this.props.delete}
         />
 
