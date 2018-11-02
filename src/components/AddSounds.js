@@ -11,17 +11,24 @@ class AddSounds extends Component {
     }
   }
 
-  handleChange = event => {
+  handleNameChange = event => {
     this.setState({
       name: event.target.value
     });
+  }
+
+  handleDescriptionChange = event => {
+    this.setState({
+      description: event.target.value
+    })
   }
 
   handleSubmit = event => {
     event.preventDefault();
     this.props.addSound(this.state)
     this.setState({
-      name: ""
+      name: "",
+      description: "",
     });
   }
 
@@ -32,10 +39,13 @@ class AddSounds extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>Add Sound: </label>
-          <input type="text" onChange={this.handleChange} value={this.state.name} />
+          <input type="text" onChange={this.handleNameChange} value={this.state.name} />
+          <label>Add Description: </label>
+          <input type="text" onChange={this.handleDescriptionChange} value={this.state.description} />
           <input type="submit" />
         </form>
-        {this.state.name}
+        name: {this.state.name}
+        description: {this.state.description}
       </div>
     );
   }

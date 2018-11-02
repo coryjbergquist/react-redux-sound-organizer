@@ -9,7 +9,7 @@ export default function soundsReducer(state= {
       //ADD SOUND
       //make action.sound include the new sound object
     case 'ADD_SOUND':
-      const sound = {name: action.payload.name, id: cuidFn()};
+      const sound = {name: action.payload.name, description: action.payload.description, id: cuidFn()};
      //return { sound: state.sound.concat(sound.sound) };
       return { ...state, sounds: [...state.sounds, sound]}
 //-------------------------------------------------------------------------
