@@ -1,4 +1,4 @@
-export default function soundsReducer(state= {sound: ["boom", "bam"], cheese: "chickapow.2"}, action) {
+export default function soundsReducer(state= {sound: ["boom", "bam"]}, action) {
   switch ( action.type ) {
       //ADD SOUND
       //make action.sound include the new sound object
@@ -18,14 +18,15 @@ export default function soundsReducer(state= {sound: ["boom", "bam"], cheese: "c
       //must assign an id to all sounds, and create soundIndex?
       //action.id must include the sound id and maybe other stuff?
     case 'DELETE_SOUND':
-      const soundIndex = state.sounds.findIndex(sound => sound.id === action.id);
-      return {
-        ...state,
-        sound: [
-          ...state.sound.slice(0, soundIndex),
-          ...state.sound.slice(soundIndex +1)
-        ]
-      };
+      // const soundIndex = state.sounds.findIndex(sound => sound.id === action.id);
+      // return {
+      //   ...state,
+      //   sound: [
+      //     ...state.sound.slice(0, soundIndex),
+      //     ...state.sound.slice(soundIndex +1)
+      //   ]
+      // };
+      return {sound: state.sound.filter(sound => sound !== action.payload)}
 
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':
