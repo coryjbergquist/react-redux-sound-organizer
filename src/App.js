@@ -17,7 +17,6 @@ class App extends Component {
         <div>
           <p>list of sounds</p>
           <SoundsListContainer />
-          <CommentsListContainer />
         </div>
 
         <div>
