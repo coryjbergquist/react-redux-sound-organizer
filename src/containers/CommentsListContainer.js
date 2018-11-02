@@ -8,25 +8,26 @@ class CommentsListContainer extends React.Component {
   render() {
 
     return (
-      <div>
 
-        <AddComments
-          addComment={this.props.addComment}
-          soundId={this.props.sound.id}
-        />
+      <div>
+    {/*  <AddComments
+            addComment={this.props.addComment}
+            soundId={this.props.sound.id}
+          />         */}
+
 
         <CommentsList
           comments={this.props.comments}
-          soundId={this.props.sound.id}
+          // soundId={this.props.sound.id}
           delete={this.props.delete}
-        />;
+        />
+        </div>
+      );
 
-      </div>
-    );
   }
 }
 
-const mapStateToProps = state => ({comments: state.comments})
+const mapStateToProps = state => ({comments: state.sounds.comments})
 
 
 const mapDispatchToProps = dispatch => {
