@@ -5,7 +5,7 @@ import  SoundsList  from '../components/SoundsList';
 class SoundsListContainer extends React.Component {
 
   render() {
-    return <SoundsList sounds={this.props.sounds} delete={this.props.delete} countDown={this.props.countDown} />;
+    return <SoundsList sounds={this.props.sounds} delete={this.props.delete} />;
   }
 
 }
