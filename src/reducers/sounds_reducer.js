@@ -1,14 +1,18 @@
-export default function soundsReducer(state= {sound: ["boom", "bam"]}, action) {
+import cuid from 'cuid';
+export const cuidFn = cuid;
+
+export default function soundsReducer(state= {
+  sounds: [],
+  soundComments: [],
+}, action) {
   switch ( action.type ) {
       //ADD SOUND
       //make action.sound include the new sound object
     case 'ADD_SOUND':
-      const sound = {
-        //id: Math.random()*10000000000000000,
-        sound: action.payload.sound
-      }
-     return { sound: state.sound.concat(sound.sound) };
-
+      const sound = {sound: action.payload.sound, id: cuidFn()};
+     //return { sound: state.sound.concat(sound.sound) };
+      return { ...state, sounds: [...state.sounds, sound]}
+//-------------------------------------------------------------------------
       //REMOVE SOUND by filtering all sounds and returning everything
       //except the one that matches
       //will return a new state that doesn't include the matching sound.id
