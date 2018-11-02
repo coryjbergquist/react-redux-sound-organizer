@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import  SoundsList  from '../components/SoundsList';
+import  CommentsList  from '../components/CommentsList';
 
 class CommentsListContainer extends React.Component {
 
