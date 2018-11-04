@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SoundPage = ({ sounds }) => {
-//show extended view of sound: description, comments etc. 
+const SoundShow = ({ sounds }) => {
+//show extended view of sound: description, comments etc.
   const renderSound = sounds.sound.map(sound =>
     <div key={sound}>{sound}</div>
     //show title, description of sound
@@ -12,8 +12,8 @@ const SoundPage = ({ sounds }) => {
     <div>
 
       <div>
-
-        {renderSounds}
+        Showing the sound deet
+        {renderSound}
 
       </div>
 
@@ -21,4 +21,4 @@ const SoundPage = ({ sounds }) => {
   );
 };
 
-export default SoundsList;
+export default SoundShow;
