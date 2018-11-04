@@ -58,20 +58,8 @@ const Navbar = () =>
 
 
 
-// ReactDOM.render(
-//   <Provider store={store}>
-//   	<App />
-//   </Provider>, document.getElementById('root')
-// );
-
-
-
-ReactDOM.render((
-  <Router>
-    <React.Fragment>
-    <Navbar />
-      <Route path="/" component={app} />
-    </React.Fragment>
-  </Router>),
-  document.getElementById('root')
+ReactDOM.render(
+  <Provider store={store}>
+  	<App />
+  </Provider>, document.getElementById('root')
 );
