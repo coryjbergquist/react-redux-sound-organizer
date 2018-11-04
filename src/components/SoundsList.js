@@ -5,6 +5,7 @@ import CommentsListContainer from '../containers/CommentsListContainer'
 const SoundsList = (props) => {
 
   const renderSounds = props.sounds.sounds.map(sound =>
+    //<Link key={sound.id} to={`/sounds/${sound.id}`}>{sound.name}</Link>
     <li key={sound.id}>{sound.name}: {sound.description}
       <p>
         <button onClick={() => props.delete(sound.id)}>DELETE </button>
@@ -19,6 +20,7 @@ const SoundsList = (props) => {
 
   return (
     <ul>
+      <h1>Here are sounds!</h1>
       <span>{renderSounds}</span>
     </ul>
   );
