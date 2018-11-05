@@ -11,9 +11,7 @@ const SoundsList = (props) => {
       <p>
         <button onClick={() => props.delete(sound.id)}>DELETE </button>
       </p>
-      <p>
-        <CommentsListContainer sound={sound}/>
-      </p>
+
     </li>
     </div>
     //<Link style={{ marginRight: '12px' }} key={sound.id} to={`/pets/${pet.id}`}>{pet.name}</Link>
