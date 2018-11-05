@@ -1,16 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import  SoundPage  from '../components/SoundPage';
+import  SoundShow  from '../components/SoundShow';
 
-class SoundsPageContainer extends React.Component {
+const SoundsPageContainer = ({ sound }) =>
 
-  render() {
-    return <SoundPage sounds={this.props.sounds} countDown={this.props.countDown} />;
-  }
+<div>
+  <SoundShow sound={sound} />
+</div>
 
-}
+
 
 //const mapStateToProps = (state, ownProps) => {
   //const sound = state.sounds.find(sound => sound.id === +ownProps.match.params.sound.id)
 
-export default connect(mapStateToProps)(SoundsListContainer);
+
+const mapStateToProps = (state, ownProps) => {
+  const sound = state.sounds.sounds.find(sound => sound.id == ownProps.match.params.soundId)
+
+  if (sound) {
+    return { sound }
+  } else {
+    return { sound: {} }
+  }
+}
+
+export default connect(mapStateToProps)(SoundShow);
