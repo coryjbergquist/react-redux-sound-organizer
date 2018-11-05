@@ -27,7 +27,7 @@ class App extends Component {
         </div>
 
         <div>
-          <p>Random Text</p>
+          <p>Welcome to this Sound Organizer</p>
         </div>
 
         <div>

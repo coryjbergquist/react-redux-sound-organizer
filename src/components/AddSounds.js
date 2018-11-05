@@ -25,11 +25,13 @@ class AddSounds extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addSound(this.state)
+    const { addSound, history } = this.props;
+    addSound(this.state)
     this.setState({
       name: "",
       description: "",
     });
+    history.push('/sounds')
   }
 
 

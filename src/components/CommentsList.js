@@ -15,10 +15,9 @@ const CommentsList = (props) => {
 
 
   return (
-    <ul>
-
-      <span>{commentList}</span>
-    </ul>
+    <div>
+      {commentList}
+    </div>
   );
 };
 

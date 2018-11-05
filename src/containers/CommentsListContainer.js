@@ -15,12 +15,14 @@ class CommentsListContainer extends React.Component {
           soundId={this.props.sound.id}
         />
 
-
-        <CommentsList
-          comments={this.props.comments}
-          soundId={this.props.sound.id}
-          delete={this.props.delete}
-        />
+        <ul>
+        Comments:
+          <CommentsList
+            comments={this.props.comments}
+            soundId={this.props.sound.id}
+            delete={this.props.delete}
+          />
+        </ul>
 
       </div>
     );
