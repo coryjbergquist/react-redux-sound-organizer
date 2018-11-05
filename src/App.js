@@ -27,12 +27,11 @@ class App extends Component {
         </div>
 
         <div>
-          <p>list of sounds</p>
-        lies
+          <p>Random Text</p>
         </div>
 
         <div>
-          <AddSounds />
+          {/* add sounds used to be here */ }
         </div>
 
         </header>
