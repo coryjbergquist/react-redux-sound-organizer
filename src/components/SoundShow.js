@@ -1,24 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const SoundShow = ({ sounds }) => {
+const SoundShow = () =>
 //show extended view of sound: description, comments etc.
-  const renderSound = sounds.sound.map(sound =>
-    <div key={sound}>{sound}</div>
-    //show title, description of sound
-  );
+  // const renderSound = sounds.sound.map(sound =>
+  //   "sound"
+  //   //show title, description of sound
+  // );
 
-  return (
+
     <div>
 
-      <div>
-        Showing the sound deet
-        {renderSound}
+      <p>
+        SHOWING THE SOUND DEETS!
+      </p>
 
-      </div>
+      {/* {renderSound} */}
 
     </div>
-  );
-};
 
 export default SoundShow;

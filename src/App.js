@@ -5,6 +5,8 @@ import AddSounds from './components/AddSounds';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import SoundsListContainer from './containers/SoundsListContainer';
 
+import Home from './test';
+
 const link = {
   width: '100px',
   padding: '12px',
@@ -35,7 +37,6 @@ class App extends Component {
     return (
       <div className="App">
 
-
         <header className="App-header">
 
         <div>
@@ -47,16 +48,12 @@ class App extends Component {
           <AddSounds />
         </div>
 
-          <p>
-            This is also just plain text in a p tag.
-          </p>
           <div>
-            <Router>
-              <React.Fragment>
-                <Route exact path='/sounds' component={SoundsListContainer}/>
-
-              </React.Fragment>
-            </Router>
+          <Router>
+            <React.Fragment>
+              <Route path="/sounds" component={SoundsListContainer} />
+            </React.Fragment>
+          </Router>
           </div>
         </header>
       </div>
@@ -65,7 +62,7 @@ class App extends Component {
 }
 
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({sounds: state.sounds})
 
 
 export default connect(mapStateToProps)(App)

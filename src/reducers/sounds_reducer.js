@@ -2,7 +2,7 @@ import cuid from 'cuid';
 export const cuidFn = cuid;
 
 export default function soundsReducer(state= {
-  sounds: [],
+  sounds: [{name: "great sound", description: "goes bang bang", id: "123"}],
   comments: [],
 }, action) {
   switch ( action.type ) {
