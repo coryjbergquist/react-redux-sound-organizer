@@ -4,6 +4,7 @@ export const cuidFn = cuid;
 export default function soundsReducer(state= {
   sounds: [{name: "great sound", description: "goes bang bang", id: "123"}],
   comments: [],
+  loading: false,
 }, action) {
   switch ( action.type ) {
       //ADD_SOUND
@@ -28,13 +29,12 @@ export default function soundsReducer(state= {
       const comments = state.comments.filter(comment => comment.id !== action.payload);
       return {...state, comments}
 
-
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':
       return Object.assign({}, state, {loading: true})
       //fetch the sounds
     case 'FETCH_SOUNDS':
-      return {sounds: action.payload}
+      return {loading: false, sounds: action.payload}
     default:
       return state;
   }

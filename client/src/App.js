@@ -5,12 +5,19 @@ import AddSounds from './components/AddSounds';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import SoundsListContainer from './containers/SoundsListContainer';
 import NavBar from './components/NavBar'
+import { fetchSounds } from './actions/SoundActions'
 
 import Home from './test';
 
 
 
 class App extends Component {
+
+  componentDidMount() {
+   this.props.fetchSounds()
+  }
+
+
   render() {
     return (
 
@@ -43,5 +50,9 @@ class App extends Component {
 
 const mapStateToProps = state => ({sounds: state.sounds})
 
+const mapDispatchToProps = dispatch => {
+  fetchSounds: fetchSounds()
+}
 
-export default connect(mapStateToProps)(App)
+
+export default connect(mapStateToProps, {fetchSounds})(App)
