@@ -6,8 +6,8 @@ const SoundsList = (props) => {
 
   const renderSounds = props.sounds.sounds.map(sound =>
     <div>
-    <Link key={sound.id} to={`/sounds/${sound.id}`}>{sound.name}</Link>
-    <li key={sound.id}>{sound.name}: {sound.description}
+      <li key={sound.id}>
+      <Link key={sound.id} to={`/sounds/${sound.id}`}>{sound.name}</Link>
       <p>
         <button onClick={() => props.delete(sound.id)}>DELETE </button>
       </p>
