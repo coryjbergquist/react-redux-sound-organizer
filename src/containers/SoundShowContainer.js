@@ -15,6 +15,8 @@ const SoundsPageContainer = ({ sound }) =>
 
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
+
   const sound = state.sounds.sounds.find(sound => sound.id == ownProps.match.params.soundId)
 
   if (sound) {

@@ -7,8 +7,9 @@ const SoundShow = ({sound}) => {
 
   return(
     <div>
-    {sound.name}: {sound.description}
-      <h2>count it down for the deetz</h2>
+    <p> Sound Name: {sound.name} </p>
+
+    <p> Sound Description: {sound.description} </p>
     </div>
 
   )
