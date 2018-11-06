@@ -1,10 +1,8 @@
-class MoviesController < ApplicationController
+class SoundsController < ApplicationController
 
   def index
-
-      @movies = Movie.order(:title)
-      @reviews = Review.last(5).reverse
-
-    end
+    @sounds = Sound.all
+    render json: @sounds
+  end
 
   end
