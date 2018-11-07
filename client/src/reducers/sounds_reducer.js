@@ -36,9 +36,8 @@ export default function soundsReducer(state= {
 
       //fetch the sounds
     case 'FETCH_SOUNDS':
-    debugger
     
-      console.log(`here is the response ${action.payload}`)
+
       return { loading: false, ...state, sounds: [...state.sounds, action.payload]}
 
     default:

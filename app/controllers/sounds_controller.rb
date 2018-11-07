@@ -3,8 +3,10 @@ require 'pry'
 class SoundsController < ApplicationController
 
   def index
-    @sounds = Sound.first
+    @sounds = Sound.all
+
     render json: @sounds
+
   end
 
   end

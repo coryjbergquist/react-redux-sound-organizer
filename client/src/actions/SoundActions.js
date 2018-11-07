@@ -6,7 +6,7 @@ export function fetchSounds() {
     fetch('sounds')
       .then(response => response.json())
       .then(json => {dispatch({type: 'FETCH_SOUNDS', payload: json})
-
+      console.log(json)
     })
   }
 }
