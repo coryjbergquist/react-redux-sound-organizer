@@ -36,9 +36,10 @@ export default function soundsReducer(state= {
 
       //fetch the sounds
     case 'FETCH_SOUNDS':
-    
+    action.payload.map(sound => console.log(`hi there ${sound.name}`))
+    const apiSounds = action.payload.map(sound => sound)
 
-      return { loading: false, ...state, sounds: [...state.sounds, action.payload]}
+      return { loading: false, ...state, sounds: [...state.sounds, apiSounds]}
 
     default:
       return state;
