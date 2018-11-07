@@ -1,7 +1,9 @@
+require 'pry'
+
 class SoundsController < ApplicationController
 
   def index
-    @sounds = Sound.all
+    @sounds = Sound.first
     render json: @sounds
   end
 

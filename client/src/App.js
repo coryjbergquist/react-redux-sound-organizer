@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-
+      console.log(this.props.sounds),
       <div className="App">
 
         <header className="App-header">
@@ -49,10 +49,5 @@ class App extends Component {
 
 
 const mapStateToProps = state => ({sounds: state.sounds})
-
-const mapDispatchToProps = dispatch => {
-  fetchSounds: fetchSounds()
-}
-
 
 export default connect(mapStateToProps, {fetchSounds})(App)

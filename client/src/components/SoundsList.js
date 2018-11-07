@@ -5,7 +5,8 @@ import CommentsListContainer from '../containers/CommentsListContainer'
 const SoundsList = (props) => {
 
   const renderSounds = props.sounds.sounds.map(sound =>
-    <div>
+
+    <div key={sound.id}>
       <li key={sound.id}>
       <Link key={sound.id} to={`/sounds/${sound.id}`}>{sound.name}</Link>
       <p>
