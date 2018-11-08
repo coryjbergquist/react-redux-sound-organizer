@@ -40,7 +40,7 @@ class AddSounds extends Component {
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} id="new-sound-form">
           <label>Add Sound: </label>
           <input type="text" onChange={this.handleNameChange} value={this.state.name} />
           <label>Add Description: </label>
