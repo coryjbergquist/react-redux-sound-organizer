@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
+import { addSound } from '../actions/AddSounds'
 
 class AddSounds extends Component {
 
