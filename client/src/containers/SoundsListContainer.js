@@ -7,18 +7,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SoundShowContainer from './SoundShowContainer'
 import AddSounds from '../components/AddSounds'
 import { fetchSounds } from '../actions/SoundActions'
+import { deleteSound } from '../actions/DeleteSound'
 
 
 class SoundsListContainer extends React.Component {
 
-// constructor() {
-//   this.adapter = new SoundsAdapter()
-//   this.bindEventListeners()
-// }
+constructor(props) {
+  super();
+  fetchSounds()
+}
 
-// componentDidMount() {
-//  this.props.fetchSounds()
-// }
+
 
   render() {
     return (
@@ -42,7 +41,6 @@ const mapStateToProps = state => ({sounds: state.sounds})
 const mapDispatchToProps = dispatch => {
   return {
     delete: soundObject => dispatch({type: 'DELETE_SOUND', payload: soundObject }),
-    fetchSounds: fetchSounds
   }
 }
 

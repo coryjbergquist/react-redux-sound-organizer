@@ -32,7 +32,7 @@ class AddSounds extends Component {
       name: "",
       description: "",
     });
-    history.push('/')
+    history.push("/sounds")
   }
 
   // handleSubmit = event => {
