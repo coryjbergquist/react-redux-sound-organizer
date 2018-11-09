@@ -24,7 +24,6 @@ class SoundsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     @sound = Sound.find(params[:id])
     @sound.delete
     @sounds = Sound.all

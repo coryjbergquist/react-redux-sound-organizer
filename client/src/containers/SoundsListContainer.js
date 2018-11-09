@@ -12,22 +12,21 @@ import { deleteSound } from '../actions/DeleteSound'
 
 class SoundsListContainer extends React.Component {
 
-constructor(props) {
-  super();
-  fetchSounds()
-}
+// constructor(props) {
+//   super();
+//   fetchSounds()
+// }
 
 
   render() {
     return (
       <div>
+      <h3>Please select a sound from the list.</h3>
         <SoundsList sounds={this.props.sounds} delete={this.props.deleteSound} />
         <Switch>
-          <Route path={`${this.props.match.url}/new`} component={AddSounds} />
-          <Route path={`${this.props.match.url}/:soundId`} component={SoundShowContainer}/>
-          <Route exact path={this.props.match.url} render={() => (
-          <h3>Please select a sound from the list.</h3>
-          )}/>
+          <Route exact path={`${this.props.match.url}/new`} component={AddSounds} />
+          <Route exact path={`${this.props.match.url}/:soundId`} component={SoundShowContainer}/>
+
         </Switch>
       </div>
     );

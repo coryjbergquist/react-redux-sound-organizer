@@ -10,13 +10,14 @@ export default function soundsReducer(state= {
       //ADD_SOUND
       //make action.sound include the new sound object
       //eventually includes sound file
-    case 'ADD_SOUND':
-      const sound = {name: action.payload.name, description: action.payload.description, id: cuidFn()};
-      return { ...state, sounds: [...state.sounds, sound]}
 
-    case 'DELETE_SOUND':
-      const sounds = state.sounds.filter(sound => sound.id !== action.payload);
-      return {...state, sounds}
+    // case 'ADD_SOUND':
+    //   const sound = {name: action.payload.name, description: action.payload.description, id: cuidFn()};
+    //   return { ...state, sounds: [...state.sounds, sound]}
+
+    // case 'DELETE_SOUND':
+    //   const sounds = state.sounds.filter(sound => sound.id !== action.payload);
+    //   return {...state, sounds}
 
       //connect comment to sound through soundId
     case 'ADD_COMMENT':
@@ -36,11 +37,12 @@ export default function soundsReducer(state= {
 
       //fetch the sounds
     case 'FETCH_SOUNDS':
-      action.payload.map(sound => console.log(`hi there ${sound.name}`))
+    
+      //action.payload.map(sound => console.log(`hi there ${sound.name}`))
 
-      const apiSounds = action.payload.map(sound => sound)
+      //const apiSounds = action.payload.map(sound => sound)
 
-        return { loading: false, ...state, sounds: apiSounds}
+        return { loading: false, ...state, sounds: action.payload}
 
 
 
@@ -66,14 +68,15 @@ export default function soundsReducer(state= {
       };
 
     case 'DELETE_SOUND_START':
-    
+
       return {
         ...state, loading: true,
     }
 
     case 'DELETE_SOUND_SUCCESS':
+
       return {
-        loading: false, ...state, sounds: [...state.sounds, action.payload]
+        loading: false, ...state, sounds: action.payload
       }
 
 
