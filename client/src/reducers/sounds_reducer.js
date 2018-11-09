@@ -36,7 +36,6 @@ export default function soundsReducer(state= {
 
       //fetch the sounds
     case 'FETCH_SOUNDS':
-      console.log(`in fetch_sounds: ${action.payload.name}`)
       action.payload.map(sound => console.log(`hi there ${sound.name}`))
 
       const apiSounds = action.payload.map(sound => sound)
@@ -46,13 +45,14 @@ export default function soundsReducer(state= {
 
 
     case 'ADD_SOUND_STARTED':
+    
       console.log("started to add sound")
       return {
         ...state,
         loading: true
     };
     case 'ADD_SOUND_SUCCESS':
-    debugger
+
       console.log(`Successfully added sound! ${action.payload}`)
       return {
         loading: false, ...state, sounds: [...state.sounds, action.payload]
@@ -66,10 +66,10 @@ export default function soundsReducer(state= {
       };
 
     case 'DELETE_SOUND_START':
-    console.log("starting to delete sound")
+    debugger
       return {
         ...state, loading: true,
-      }
+    }
 
     case 'DELETE_SOUND_SUCCESS':
       return {
