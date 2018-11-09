@@ -27,7 +27,8 @@ class SoundsController < ApplicationController
     binding.pry
     @sound = Sound.find(params[:id])
     @sound.delete
-    render json: {soundId: @sound.id}
+    @sounds = Sound.all
+    render json: @sounds, status: 2
   end
 
 
