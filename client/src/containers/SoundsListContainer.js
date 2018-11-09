@@ -40,7 +40,7 @@ const mapStateToProps = state => ({sounds: state.sounds})
 
 const mapDispatchToProps = dispatch => {
   return {
-    delete: soundObject => dispatch({type: 'DELETE_SOUND', payload: soundObject }),
+    delete: soundId => deleteSound(soundId),
   }
 }
 

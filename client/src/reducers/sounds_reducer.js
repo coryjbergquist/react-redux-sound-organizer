@@ -66,8 +66,14 @@ export default function soundsReducer(state= {
       };
 
     case 'DELETE_SOUND_START':
+    console.log("starting to delete sound")
       return {
         ...state, loading: true,
+      }
+
+    case 'DELETE_SOUND_SUCCESS':
+      return {
+        loading: false, ...state, sounds: [...state.sounds, action.payload]
       }
 
 

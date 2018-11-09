@@ -1,15 +1,25 @@
 import axios from 'axios';
 
 export const deleteSound = (soundId) => {
+
   return dispatch => {
-    dispatch({type: 'DELETE_SOUND_START', payload: soundId);
+    dispatch(deleteSoundStart(soundId));
     const data = {id: soundId}
-    fetch('/sounds', {
+    fetch('/sounds' + soundId, {
        method: 'DELETE',
        headers: {
          'content-type': 'application/json',
        },
-       body: JSON.stringify(data)
     })
       .then(response => response.json())
-      .then(json => {dispatch({type: 'ADD_SOUND_SUCCESS', payload: json})})
+      .then(json => {dispatch({type: 'DELETE_SOUND_SUCCESS', payload: json})})
+
+  }
+}
+
+
+
+const deleteSoundStart = sound => ({
+  type: 'DELETE_SOUND_START',
+  payload: sound
+});
