@@ -2,7 +2,7 @@ import cuid from 'cuid';
 export const cuidFn = cuid;
 
 export default function soundsReducer(state= {
-  sounds: [{name: "great sound", description: "goes bang bang", id: "123"}],
+  sounds: [],
   comments: [],
   loading: false,
 }, action) {
@@ -37,26 +37,26 @@ export default function soundsReducer(state= {
       //fetch the sounds
     case 'FETCH_SOUNDS':
 
-    action.payload.map(sound => console.log(`hi there ${sound.name}`))
+      action.payload.map(sound => console.log(`hi there ${sound.name}`))
 
-    const apiSounds = action.payload.map(sound => sound)
+      const apiSounds = action.payload.map(sound => sound)
 
-      return { loading: false, ...state, sounds: apiSounds}
+        return { loading: false, ...state, sounds: apiSounds}
 
 
 
-      case 'ADD_SOUND_STARTED':
+    case 'ADD_SOUND_STARTED':
+      console.log("started to add sound")
       return {
         ...state,
         loading: true
-      };
+    };
     case 'ADD_SOUND_SUCCESS':
+      console.log("Successfully added sound!")
       return {
-        ...state,
-        loading: false,
-        error: null,
-        sounds: [...state.sound, action.payload]
-      };
+        loading: false
+    }
+
     case 'ADD_SOUND_FAILURE':
       return {
         ...state,

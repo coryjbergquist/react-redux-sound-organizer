@@ -3,14 +3,17 @@ import axios from 'axios';
 export const addSound = (formData) => {
   return dispatch => {
     dispatch(addSoundStarted());
-
-    fetch('sounds/new', {
+    const data = {name: formData.name, description: formData.description}
+    fetch('/sounds', {
      method: 'POST',
-     data: {
-       formData
-     }
+     headers: {
+       'content-type': 'application/json',
+     },
+     body: JSON.stringify(data)
+
    })
       .then(res => {
+        
         dispatch(addSoundSuccess(res.data));
       })
       .catch(err => {

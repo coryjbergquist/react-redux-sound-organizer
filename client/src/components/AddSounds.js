@@ -27,13 +27,24 @@ class AddSounds extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const { addSound, history } = this.props;
-    addSound(this.state)
+    this.props.addSound(this.state)
     this.setState({
       name: "",
       description: "",
     });
-    history.push('/sounds')
+    history.push('/')
   }
+
+  // handleSubmit = event => {
+  //   event.preventDefault();
+  //   const { addSound, history } = this.props;
+  //   addSound(this.state)
+  //   this.setState({
+  //     name: "",
+  //     description: "",
+  //   });
+  //   history.push('/sounds')
+  // }
 
 
 
@@ -54,8 +65,8 @@ class AddSounds extends Component {
   }
 };
 
-const mapDispatchToProps = dispatch => ({
-  addSound: formData => dispatch({ type: 'ADD_SOUND', payload: formData })
-})
+// const mapDispatchToProps = dispatch => ({
+//   addSound: formData => dispatch({ type: 'ADD_SOUND', payload: formData })
+// })
 
-export default connect(null, mapDispatchToProps)(AddSounds);
+export default connect(null, {addSound})(AddSounds);

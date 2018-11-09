@@ -32,7 +32,7 @@ class SoundsController < ApplicationController
 
   private
     def sound_params
-      params.require(:sound).permit(:name)
+      params.require(:sound).permit(:name, :description)
     end
 
 
