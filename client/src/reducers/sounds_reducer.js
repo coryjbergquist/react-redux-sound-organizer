@@ -45,7 +45,7 @@ export default function soundsReducer(state= {
 
 
     case 'ADD_SOUND_STARTED':
-    
+
       console.log("started to add sound")
       return {
         ...state,
@@ -66,7 +66,7 @@ export default function soundsReducer(state= {
       };
 
     case 'DELETE_SOUND_START':
-    debugger
+    
       return {
         ...state, loading: true,
     }

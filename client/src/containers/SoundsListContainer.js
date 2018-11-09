@@ -18,11 +18,10 @@ constructor(props) {
 }
 
 
-
   render() {
     return (
       <div>
-        <SoundsList sounds={this.props.sounds} delete={this.props.delete} />
+        <SoundsList sounds={this.props.sounds} delete={this.props.deleteSound} />
         <Switch>
           <Route path={`${this.props.match.url}/new`} component={AddSounds} />
           <Route path={`${this.props.match.url}/:soundId`} component={SoundShowContainer}/>
@@ -38,10 +37,10 @@ constructor(props) {
 
 const mapStateToProps = state => ({sounds: state.sounds})
 
-const mapDispatchToProps = dispatch => {
-  return {
-    delete: soundId => deleteSound(soundId),
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     delete: soundId => deleteSound(soundId),
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SoundsListContainer);
+export default connect(mapStateToProps, {deleteSound})(SoundsListContainer);

@@ -28,7 +28,7 @@ class SoundsController < ApplicationController
     @sound = Sound.find(params[:id])
     @sound.delete
     @sounds = Sound.all
-    render json: @sounds, status: 2
+    render json: @sounds, status: 200
   end
 
 
