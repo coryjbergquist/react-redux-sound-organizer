@@ -1,6 +1,6 @@
 
 export function fetchComments() {
-  debugger
+  
   return (dispatch) => {
 
     dispatch({type: 'LOADING_COMMENTS'})
