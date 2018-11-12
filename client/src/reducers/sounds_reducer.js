@@ -37,7 +37,7 @@ export default function soundsReducer(state= {
 
       //fetch the sounds
     case 'FETCH_SOUNDS':
-    
+
       //action.payload.map(sound => console.log(`hi there ${sound.name}`))
 
       //const apiSounds = action.payload.map(sound => sound)
@@ -71,12 +71,25 @@ export default function soundsReducer(state= {
 
       return {
         ...state, loading: true,
-    }
+      }
 
     case 'DELETE_SOUND_SUCCESS':
 
       return {
         loading: false, ...state, sounds: action.payload
+      }
+
+    case 'ADD_COMMENT_STARTED':
+      console.log("started to add comment")
+      return {
+        ...state, loading: true
+      }
+
+    case 'ADD_COMMENT_SUCCESS':
+
+      console.log(`Successfully added comment! ${action.payload}`)
+      return {
+        loading: false, ...state, comments: [...state.comments, action.payload]
       }
 
 

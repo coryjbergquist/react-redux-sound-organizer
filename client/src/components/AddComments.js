@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {AddComment} from '../actions/AddSounds'
 
 class AddComment extends Component {
 
@@ -15,7 +16,7 @@ class AddComment extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.addComment({text: this.state.text, soundId: this.props.soundId });
+    this.props.AddComment({text: this.state.text, soundId: this.props.soundId });
     this.setState({
       text: '',
     });
@@ -37,8 +38,8 @@ class AddComment extends Component {
   }
 };
 
-const mapDispatchToProps = dispatch => ({
-  addComment: commentData => dispatch({ type: 'ADD_COMMENT', payload: commentData })
-})
+// const mapDispatchToProps = dispatch => ({
+//   addComment: commentData => dispatch({ type: 'ADD_COMMENT', payload: commentData })
+// })
 
-export default connect(null, mapDispatchToProps)(AddComment);
+export default connect(null, {AddComment})(AddComment);
