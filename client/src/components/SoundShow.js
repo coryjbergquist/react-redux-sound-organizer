@@ -12,7 +12,7 @@ const SoundShow = ({sound}) => {
 
     <p> Sound Description: {sound.description} </p>
 
-    <p> <CommentsListContainer sound={sound}/> </p>
+    <div> <CommentsListContainer sound={sound}/> </div>
     </div>
 
   )

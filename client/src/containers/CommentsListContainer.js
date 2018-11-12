@@ -7,9 +7,9 @@ import {deleteComment} from '../actions/DeleteComment'
 
 class CommentsListContainer extends React.Component {
 
-  // componentDidMount() {
-  //  this.props.fetch()
-  // }
+  componentDidMount() {
+   this.props.fetchComments()
+  }
 
   render() {
 
@@ -45,4 +45,12 @@ const mapStateToProps = state => ({comments: state.sounds})
 //   }
 // }
 
-export default connect(mapStateToProps, {deleteComment})(CommentsListContainer);
+const bindActionsToDispatch = dispatch =>
+(
+  {
+    fetchComments : () => dispatch(fetchComments()),
+    deleteComment : () => dispatch(deleteComment())
+  }
+);
+
+export default connect(mapStateToProps, bindActionsToDispatch)(CommentsListContainer);
