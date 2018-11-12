@@ -13,8 +13,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    binding.pry
-    @comment = Comment.create(comment_params)
+    @sound = Sound.find(params[:soundId])
+    @comment = @sound.comments.build(comment_params)
+    @sound.save
     render json: @comment, status: 200
   end
 
