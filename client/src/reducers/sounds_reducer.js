@@ -26,9 +26,9 @@ export default function soundsReducer(state= {
     //     comments: [...state.comments, comment]
     // }
 
-    case 'DELETE_COMMENT':
-      const comments = state.comments.filter(comment => comment.id !== action.payload);
-      return {...state, comments}
+    // case 'DELETE_COMMENT':
+    //   const comments = state.comments.filter(comment => comment.id !== action.payload);
+    //   return {...state, comments}
 
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':
@@ -87,7 +87,7 @@ export default function soundsReducer(state= {
     case 'ADD_COMMENT_SUCCESS':
 
       const comment = { text: action.payload.text, soundId: action.payload.sound_id, id: action.payload.id };
-debugger
+
       console.log(`Successfully added comment! ${comment.text}`)
       return {
         loading: false, ...state, comments: [...state.comments, comment]
@@ -97,9 +97,19 @@ debugger
         return Object.assign({}, state, {loading: true})
 
       case 'FETCH_COMMENTS':
-
         return { loading: false, ...state, comments: [...state.comments, action.payload]}
 
+      case 'DELETE_COMMENT_START':
+
+        return {
+          ...state, loading: true,
+        }
+
+        case 'DELETE_COMMENT_SUCCESS':
+
+          return {
+            loading: false, ...state, comments: action.payload
+          }
 
     default:
       return state;

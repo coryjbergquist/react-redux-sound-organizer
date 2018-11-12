@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import  CommentsList  from '../components/CommentsList';
 import AddComments from '../components/AddComments'
 import {fetchComments} from '../actions/FetchComments'
+import {deleteComment} from '../actions/DeleteComment'
 
 class CommentsListContainer extends React.Component {
 
@@ -25,7 +26,7 @@ class CommentsListContainer extends React.Component {
           <CommentsList
             comments={this.props.comments}
             soundId={this.props.sound.id}
-            delete={this.props.delete}
+            delete={this.props.deleteComment}
           />
         </ul>
 
@@ -37,11 +38,11 @@ class CommentsListContainer extends React.Component {
 const mapStateToProps = state => ({comments: state.sounds})
 
 
-const mapDispatchToProps = dispatch => {
-  return {
-    delete: commentObject => dispatch({type: 'DELETE_COMMENT', payload: commentObject }),
-    fetch: commentObject => dispatch(fetchComments())
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     delete: commentObject => dispatch(deleteComment()),
+//     fetch: commentObject => dispatch(fetchComments())
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentsListContainer);
+export default connect(mapStateToProps, {deleteComment})(CommentsListContainer);
