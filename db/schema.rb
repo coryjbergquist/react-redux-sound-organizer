@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_140922) do
 
   create_table "comments", force: :cascade do |t|
     t.string "text"
-    t.string "SoundId"
+    t.string "soundId"
   end
 
   create_table "sounds", force: :cascade do |t|

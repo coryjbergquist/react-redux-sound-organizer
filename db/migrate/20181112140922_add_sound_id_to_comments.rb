@@ -1,5 +1,5 @@
 class AddSoundIdToComments < ActiveRecord::Migration[5.2]
   def change
-    add_column :comments, :SoundId, :string
+    add_column :comments, :soundId, :string
   end
 end

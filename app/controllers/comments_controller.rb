@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    binding.pry
     @comment = Comment.create(comment_params)
     render json: @comment, status: 200
   end
@@ -33,7 +34,7 @@ class CommentsController < ApplicationController
 
   private
     def comment_params
-      params.require(:comment).permit(:text)
+      params.require(:comment).permit(:text, :soundId)
     end
 
 

@@ -80,7 +80,7 @@ export default function soundsReducer(state= {
       }
 
     case 'ADD_COMMENT_STARTED':
-      console.log("started to add comment")
+      console.log(`started to add comment to`)
       return {
         ...state, loading: true
       }

@@ -2,8 +2,9 @@ import axios from 'axios';
 
 export const addComment = (formData) => {
   return dispatch => {
+
     dispatch(addCommentStarted(formData));
-    const data = {text: formData.text, SoundId: formData.text}
+    const data = {text: formData.text, soundId: formData.soundId}
     fetch('/comments', {
        method: 'POST',
        headers: {
