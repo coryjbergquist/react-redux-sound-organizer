@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CommentsList = (props) => {
-debugger
-  const associatedComments = props.comments[0].filter(comment => props.soundId === comment.soundId);
+  const myComments = props.comments.comments[0]
+
+  let associatedComments = myComments.filter(comment => props.soundId === parseInt(comment.sound_id))
 
   const commentList = associatedComments.map(comment =>
     <li key={comment.id}>{comment.text}

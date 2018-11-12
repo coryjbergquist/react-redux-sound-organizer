@@ -1,13 +1,13 @@
-class SoundsAdapter {
-  constructor() {
-    this.baseUrl = "http://localhost:3000/sounds"
-  }
-
-  getSounds() {
-    return fetch(this.baseUrl).then(res => res.json()
-    )
-  }
-}
+// class SoundsAdapter {
+//   constructor() {
+//     this.baseUrl = "http://localhost:3000/sounds"
+//   }
+//
+//   getSounds() {
+//     return fetch(this.baseUrl).then(res => res.json()
+//     )
+//   }
+// }
 
 
 
