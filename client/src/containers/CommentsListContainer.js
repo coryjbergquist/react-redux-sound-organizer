@@ -2,8 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import  CommentsList  from '../components/CommentsList';
 import AddComments from '../components/AddComments'
+import {fetchComments} from '../actions/FetchComments'
 
 class CommentsListContainer extends React.Component {
+
+
 
   render() {
 
@@ -29,12 +32,13 @@ class CommentsListContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({comments: state.sounds.comments})
+const mapStateToProps = state => ({comments: state.sounds})
 
 
 const mapDispatchToProps = dispatch => {
   return {
-    delete: commentObject => dispatch({type: 'DELETE_COMMENT', payload: commentObject })
+    delete: commentObject => dispatch({type: 'DELETE_COMMENT', payload: commentObject }),
+    fetch: commentObject => dispatch(fetchComments())
   }
 }
 

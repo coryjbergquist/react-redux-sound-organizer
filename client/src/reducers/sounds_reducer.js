@@ -20,11 +20,11 @@ export default function soundsReducer(state= {
     //   return {...state, sounds}
 
       //connect comment to sound through soundId
-    case 'ADD_COMMENT':
-      const comment = { text: action.payload.text, soundId: action.payload.soundId, id: cuidFn() };
-      return { ...state,
-        comments: [...state.comments, comment]
-    }
+    // case 'ADD_COMMENT':
+    //   const comment = { text: action.payload.text, soundId: action.payload.soundId, id: cuidFn() };
+    //   return { ...state,
+    //     comments: [...state.comments, comment]
+    // }
 
     case 'DELETE_COMMENT':
       const comments = state.comments.filter(comment => comment.id !== action.payload);
@@ -37,8 +37,6 @@ export default function soundsReducer(state= {
 
       //fetch the sounds
     case 'FETCH_SOUNDS':
-
-      //action.payload.map(sound => console.log(`hi there ${sound.name}`))
 
       //const apiSounds = action.payload.map(sound => sound)
 
@@ -53,6 +51,7 @@ export default function soundsReducer(state= {
         ...state,
         loading: true
     };
+
     case 'ADD_SOUND_SUCCESS':
 
       console.log(`Successfully added sound! ${action.payload}`)
@@ -80,18 +79,27 @@ export default function soundsReducer(state= {
       }
 
     case 'ADD_COMMENT_STARTED':
-      console.log(`started to add comment to`)
+      console.log(`started to add comment`)
       return {
         ...state, loading: true
       }
 
     case 'ADD_COMMENT_SUCCESS':
 
-      console.log(`Successfully added comment! ${action.payload}`)
+      const comment = { text: action.payload.text, soundId: action.payload.sound_id, id: action.payload.id };
+debugger
+      console.log(`Successfully added comment! ${comment.text}`)
       return {
-        loading: false, ...state, comments: [...state.comments, action.payload]
+        loading: false, ...state, comments: [...state.comments, comment]
       }
 
+      case 'LOADING_COMMENTS':
+        return Object.assign({}, state, {loading: true})
+
+      case 'FETCH_COMMENTS':
+      
+      debugger
+        return { loading: false, ...state, comments: [...state.comments, action.payload]}
 
 
     default:

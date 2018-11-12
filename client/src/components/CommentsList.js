@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CommentsList = (props) => {
-
+debugger
   const associatedComments = props.comments.filter(comment => props.soundId === comment.soundId);
 
   const commentList = associatedComments.map(comment =>
