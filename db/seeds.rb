@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Sound.create(name: "Sound One", description: "it goes schwoooop")
 Sound.create(name: "Sound Two", description: "it goes BWOOONG")
+
+Comment.create(text: "comment 1 for sound 1", sound_id: "1")
+Comment.create(text: "comment 1 for sound 2", sound_id: "2")

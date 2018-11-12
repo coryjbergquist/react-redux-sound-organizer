@@ -97,8 +97,6 @@ debugger
         return Object.assign({}, state, {loading: true})
 
       case 'FETCH_COMMENTS':
-      
-      debugger
         return { loading: false, ...state, comments: [...state.comments, action.payload]}
 
 

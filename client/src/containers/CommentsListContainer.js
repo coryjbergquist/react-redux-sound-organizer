@@ -6,7 +6,9 @@ import {fetchComments} from '../actions/FetchComments'
 
 class CommentsListContainer extends React.Component {
 
-
+  componentDidMount() {
+   this.props.fetch()
+  }
 
   render() {
 
@@ -32,7 +34,7 @@ class CommentsListContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({comments: state.sounds})
+const mapStateToProps = state => ({comments: state.sounds.comments})
 
 
 const mapDispatchToProps = dispatch => {

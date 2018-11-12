@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CommentsList = (props) => {
 debugger
-  const associatedComments = props.comments.filter(comment => props.soundId === comment.soundId);
+  const associatedComments = props.comments[0].filter(comment => props.soundId === comment.soundId);
 
   const commentList = associatedComments.map(comment =>
     <li key={comment.id}>{comment.text}
