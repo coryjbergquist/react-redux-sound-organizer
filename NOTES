@@ -7,51 +7,7 @@ so far:
 --Comments have text, id, and soundId
 --Comments only show up for the sounds that they are created under
 
-next:  build out show sound page to show single sound
-        routes
-
-
-# React Redux Portfolio Project
-
-## Sound Organizer
-
-1. Users can create account
-2. Users can upload sounds to their account
-    - sounds include a sound file, a title, a description
-      - also have key words?
-    - can choose between sound being public or private?
-
-3. Users can CRUD their sounds
-4. Users can only view and comment on sounds that don't belong to them.
-
-5. Has 2 container components
-    5a. one container to hold all of users sounds
-    5b. one container to hold a single sound
-    5c. one container to hold form for uploading sounds
-
-6. has 5 stateless components (function components)
-  6.1 has 1 HTML page to render app
-    6a. show all users sounds
-    6b. show one sound with extra info
-    6c. show input form
-    6d. show user login
-    6e. show user signup
-
-7. has 3 routes (use react-router)
-    7a. users
-    7b. /users/sounds
-    7c. /users/sounds/1
-    7d. /sounds/new
-
-8. Use Redux middleware to respond to and modify state change
-
-- Make use of async actions to send data to and receive data from a server
-
-- Your Rails API should handle the data persistence. You should be using  fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
-
-- Your client-side application should handle the display of data with minimal data manipulation
-
-- Your application should have some minimal styling: feel free to stick to a framework (like react-bootstrap), but if you want to write (additional) CSS yourself, go for it!
+next:  add comments to API, add login
 
 MAYBE
 add upvote/downvote via this lesson: https://learn.co/tracks/full-stack-web-development-v5/redux/redux-library/cooking-with-redux

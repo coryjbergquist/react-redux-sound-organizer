@@ -7,7 +7,6 @@ import SoundsListContainer from './containers/SoundsListContainer';
 import NavBar from './components/NavBar'
 import { fetchSounds } from './actions/SoundActions'
 
-import Home from './test';
 
 
 
