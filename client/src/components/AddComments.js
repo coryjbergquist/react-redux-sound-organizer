@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {AddComment} from '../actions/AddSounds'
+import {addComment} from '../actions/AddComments'
 
 class AddComment extends Component {
 
@@ -16,7 +16,7 @@ class AddComment extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.AddComment({text: this.state.text, soundId: this.props.soundId });
+    this.props.addComment({text: this.state.text, soundId: this.props.soundId });
     this.setState({
       text: '',
     });
@@ -42,4 +42,4 @@ class AddComment extends Component {
 //   addComment: commentData => dispatch({ type: 'ADD_COMMENT', payload: commentData })
 // })
 
-export default connect(null, {AddComment})(AddComment);
+export default connect(null, {addComment})(AddComment);
