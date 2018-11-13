@@ -24,9 +24,9 @@ class SoundsListContainer extends React.Component {
       <h3>Please select a sound from the list.</h3>
         <SoundsList sounds={this.props.sounds} delete={this.props.deleteSound} />
         <Switch>
-          <Route exact path={`${this.props.match.url}/:soundId`} component={SoundShowContainer}/>
-          <Route exact path={`${this.props.match.url}/new`} component={AddSounds} />
 
+          <Route exact path={`${this.props.match.url}/new`} component={AddSounds} />
+          <Route exact path={`${this.props.match.url}/:soundId`} component={SoundShowContainer}/>
         </Switch>
       </div>
     );
