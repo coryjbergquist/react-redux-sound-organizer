@@ -1,17 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentsListContainer from '../containers/CommentsListContainer'
-import Sound from './Sound'
+import SoundsList from './SoundsList'
 
-class SoundsList extends React.Component { //= (props) => {
+class Sound extends React.Component {
   constructor(props) {
-    super(props)
+
+    super(props);
+    this.state = {
+      num: 0
+    }
   }
 
 
-  renderSounds = this.props.sounds.sounds.map((sound) =>
-    <Sound sound={sound}/> //adding a Sounds component for each sound props
-  )
+onClick = () => {
+  console.log(this.state.num)
+  this.setState({num: this.state.num + 1}
+  );
+}
 
 // renderSounds = this.props.sounds.sounds.map((sound) =>
 // //link to each sound to show description etc.
@@ -29,15 +35,19 @@ class SoundsList extends React.Component { //= (props) => {
   render(){
 
     return (
-      <ul>
-        <h1>Here are sounds!</h1>
+      <li key={this.props.sound.id}>
 
-        {this.renderSounds}
+      <Link key={this.props.sound.id} to={`/sounds/${this.props.sound.id}`}>{this.props.sound.name}</Link>
+      <p>
+        <button onClick={() => this.props.delete(this.props.sound.id)}>DELETE </button>
+        <button onClick={this.onClick}>LIKE </button>
+        {this.state.num}
 
-      </ul>
-    )
+      </p>
+    </li>
+    );
   }
-}
+};
 
 
-export default SoundsList;
+export default Sound;

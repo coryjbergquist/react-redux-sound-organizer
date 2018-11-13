@@ -63,3 +63,6 @@ ReactDOM.render(
   	<App />
   </Provider>, document.getElementById('root')
 );
+
+// const domContainer = document.querySelector('#index_container');
+// ReactDOM.render((App), domContainer);

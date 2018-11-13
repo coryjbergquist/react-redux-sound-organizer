@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const addSound = (formData) => {
+  console.log('C')
   return dispatch => {
     dispatch(addSoundStarted(formData));
     const data = {name: formData.name, description: formData.description}
@@ -12,7 +13,9 @@ export const addSound = (formData) => {
        body: JSON.stringify(data)
     })
       .then(response => response.json())
-      .then(json => {dispatch({type: 'ADD_SOUND_SUCCESS', payload: json})})
+      .then(json => {
+        console.log('D')
+        dispatch({type: 'ADD_SOUND_SUCCESS', payload: json})})
 
 
       //.then(res => res.json())
@@ -21,6 +24,7 @@ export const addSound = (formData) => {
       //   dispatch(addSoundFailure(err.message));
       // })
   };
+  console.log('E')
 };
 
 const addSoundSuccess = sound => ({
