@@ -25,7 +25,7 @@ onClick = () => {
 
       <Link key={this.props.sound.id} to={`/sounds/${this.props.sound.id}`}>{this.props.sound.name}</Link>
       <p>
-        <button onClick={() => this.props.delete(this.props.sound.id)}>DELETE </button>
+      <button onClick={() => this.props.delete(this.props.sound)}>DELETE </button>
         <button onClick={this.onClick}>LIKE </button>
         {this.state.num}
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {addComment} from '../actions/AddComments'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class AddComment extends Component {
 
@@ -16,11 +17,25 @@ class AddComment extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
+    const { addComment, history } = this.props;
     this.props.addComment({text: this.state.text, soundId: this.props.soundId });
     this.setState({
       text: '',
     });
+    history.push("/")
   }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const { addSound, history } = this.props;
+    this.props.addSound(this.state)
+    this.setState({
+      name: "",
+      description: "",
+    });
+    history.push("/")
+  }
+
 
   render() {
     return (

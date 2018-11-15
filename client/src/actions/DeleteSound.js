@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-export const deleteSound = (soundId) => {
+export const deleteSound = (sound) => {
 
   return dispatch => {
     dispatch({type: 'DELETE_SOUND_START'});
-    const data = {id: soundId}
-    fetch('/sounds/' + soundId, {
+
+    fetch('/sounds/' + sound.id, {
        method: 'DELETE',
     })
       .then(response => response.json())
@@ -13,10 +13,3 @@ export const deleteSound = (soundId) => {
 
   }
 }
-
-
-
-const deleteSoundStart = sound => ({
-  type: 'DELETE_SOUND_START',
-  payload: sound
-});

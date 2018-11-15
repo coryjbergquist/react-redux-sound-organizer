@@ -5,11 +5,12 @@ import AddComments from '../components/AddComments'
 import {fetchComments} from '../actions/FetchComments'
 import {deleteComment} from '../actions/DeleteComment'
 
+
 class CommentsListContainer extends React.Component {
-debugger
-  componentDidMount() {
-   this.props.fetchComments()
-  }
+
+  // componentDidMount() {
+  //  this.props.fetchComments()
+  // }
 
   render() {
 

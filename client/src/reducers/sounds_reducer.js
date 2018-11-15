@@ -73,7 +73,7 @@ export default function soundsReducer(state= {
       }
 
     case 'DELETE_SOUND_SUCCESS':
-
+    
       return {
         loading: false, ...state, sounds: action.payload
       }
