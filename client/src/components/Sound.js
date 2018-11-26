@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CommentsListContainer from '../containers/CommentsListContainer'
-import SoundsList from './SoundsList'
+// import CommentsListContainer from '../containers/CommentsListContainer'
+// import SoundsList from './SoundsList'
 
 class Sound extends React.Component {
   constructor(props) {

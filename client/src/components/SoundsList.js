@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CommentsListContainer from '../containers/CommentsListContainer'
+// import { Link } from 'react-router-dom';
+// import CommentsListContainer from '../containers/CommentsListContainer'
 import Sound from './Sound'
 import { connect } from 'react-redux';
 import { deleteSound } from '../actions/DeleteSound'
@@ -9,10 +9,7 @@ import { deleteSound } from '../actions/DeleteSound'
 
 class SoundsList extends React.Component {
 
-  constructor(props) {
-    super(props)
 
-  }
 
   //adding a Sounds component for each sound props
   renderSounds = this.props.stateSounds.sounds.map((sound) =>

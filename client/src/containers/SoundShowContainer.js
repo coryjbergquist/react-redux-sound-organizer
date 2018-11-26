@@ -31,7 +31,7 @@ class SoundsPageContainer extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
 
-  const sound = state.sounds.sounds.find(sound => sound.id == ownProps.match.params.soundId)
+  const sound = state.sounds.sounds.find(sound => sound.id === ownProps.match.params.soundId)
   if (sound) {
     return { sound }
   } else {
@@ -41,4 +41,4 @@ const mapStateToProps = (state, ownProps) => {
   //const comments = state.sounds.comments
 }
 
-export default connect(mapStateToProps, {fetchComments})(SoundShow);
+export default connect(mapStateToProps, {fetchComments})(SoundsPageContainer);

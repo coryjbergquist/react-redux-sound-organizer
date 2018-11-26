@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {addComment} from '../actions/AddComments'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class AddComment extends Component {
 
@@ -27,7 +27,7 @@ class AddComment extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { addSound, history } = this.props;
+    const { history } = this.props;
     this.props.addSound(this.state)
     this.setState({
       name: "",

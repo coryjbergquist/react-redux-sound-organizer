@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SoundsList from '../components/SoundsList';
-import SoundShow from '../components/SoundShow';
-import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import SoundShow from '../components/SoundShow';
+// import { Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SoundShowContainer from './SoundShowContainer'
 import AddSounds from '../components/AddSounds'
-import CommentsListContainer from './CommentsListContainer'
+// import CommentsListContainer from './CommentsListContainer'
 import { fetchSounds } from '../actions/SoundActions'
 import { deleteSound } from '../actions/DeleteSound'
 import {fetchComments } from '../actions/FetchComments'

@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 
 export const addComment = (formData) => {
   return dispatch => {
@@ -28,11 +28,4 @@ export const addComment = (formData) => {
 
 const addCommentStarted = () => ({
   type: 'ADD_COMMENT_STARTED'
-});
-
-const addCommentFailure = error => ({
-  type: 'ADD_COMMENT_FAILURE',
-  payload: {
-    error
-  }
 });

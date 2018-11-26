@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 
 export const addSound = (formData) => {
   return dispatch => {
@@ -24,19 +24,7 @@ export const addSound = (formData) => {
   };
 };
 
-const addSoundSuccess = sound => ({
-  type: 'ADD_SOUND_SUCCESS',
-  payload: sound
-});
 
-
-const addSoundStarted = () => ({
-  type: 'ADD_SOUND_STARTED'
-});
-
-const addSoundFailure = error => ({
-  type: 'ADD_SOUND_FAILURE',
-  payload: {
-    error
-  }
-});
+  const addSoundStarted = () => ({
+    type: 'ADD_SOUND_STARTED'
+  });

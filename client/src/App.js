@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import AddSounds from './components/AddSounds';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+// import AddSounds from './components/AddSounds';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import SoundsListContainer from './containers/SoundsListContainer';
 import NavBar from './components/NavBar'
 import { fetchSounds } from './actions/SoundActions'
