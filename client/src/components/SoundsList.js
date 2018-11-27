@@ -11,7 +11,7 @@ class SoundsList extends React.Component {
 
 
 
-  //adding a Sounds component for each sound props
+  //adding a Sounds component for each sound in props
   renderSounds = this.props.stateSounds.sounds.map((sound) =>
   <div>
     <Sound sound={sound} delete={this.props.deleteSound}/>
@@ -21,7 +21,6 @@ class SoundsList extends React.Component {
   render(){
     return (
       <ul>
-        <h1>Here are sounds!</h1>
 
         {this.renderSounds}
 

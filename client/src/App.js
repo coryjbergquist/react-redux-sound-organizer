@@ -25,16 +25,13 @@ class App extends Component {
 
         <header className="App-header">
         <div>
+          <p>Welcome to this Sound Organizer</p>
         <Router>
           <React.Fragment>
           <NavBar />
             <Route path="/sounds" component={SoundsListContainer} />
           </React.Fragment>
         </Router>
-        </div>
-
-        <div>
-          <p>Welcome to this Sound Organizer</p>
         </div>
 
         <div>
