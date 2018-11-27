@@ -17,8 +17,9 @@ Start server with "rake start" in your terminal, navigate to http://localhost:30
 3. Run "bundle install" to install all gems.
 4. Run "npm install" to install packages.
   4a. if you don't have the latest version on Node, visit this site to download and install: https://nodejs.org.
-5. Run "rake start" to start the front end and back end servers.
-6. View current sounds and add sounds by clicking the "Sounds" or "Add Sound" links.
+5. Start your Postgres server.
+6. Run "rake start" to start the front end and back end servers.
+7. View current sounds and add sounds by clicking the "Sounds" or "Add Sound" links.
 
 # CONTRIBUTIONS
 

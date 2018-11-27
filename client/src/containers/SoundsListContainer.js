@@ -21,6 +21,7 @@ class SoundsListContainer extends React.Component {
 
 
   render() {
+    debugger
     return (
       <div>
       <h3>Please select a sound from the list.</h3>
