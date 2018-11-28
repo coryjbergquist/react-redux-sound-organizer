@@ -58,8 +58,6 @@ class AddSounds extends Component {
           <input type="text" onChange={this.handleDescriptionChange} value={this.state.description} />
           <input type="submit" />
         </form>
-        name: {this.state.name}
-        description: {this.state.description}
       </div>
     );
   }
