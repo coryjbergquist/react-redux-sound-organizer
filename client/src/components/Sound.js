@@ -23,7 +23,7 @@ onClick = () => {
     return (
       <li key={this.props.sound.id}>
 
-      <Link key={this.props.sound.id} to={`/sounds/${this.props.sound.id}`}>{this.props.sound.name}</Link>
+      <Link key={this.props.sound.id} to={`/sounds/${this.props.sound.id}`} style={{ color: 'grey' }}>{this.props.sound.name}</Link>
       <p>
       <button onClick={() => this.props.delete(this.props.sound)}>DELETE </button>
         <button onClick={this.onClick}>LIKE </button>

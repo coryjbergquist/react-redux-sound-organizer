@@ -8,6 +8,8 @@ const link = {
   background: '',
   textDecoration: 'none',
   color: 'grey',
+  hover: 'white'
+
 }
 
 const NavBar = props => {
