@@ -5,6 +5,7 @@ import {fetchComments} from '../actions/FetchComments'
 
 class SoundsPageContainer extends React.Component {
   constructor({sound}) {
+
     super({sound})
   }
   componentDidMount = () => {
@@ -30,8 +31,7 @@ class SoundsPageContainer extends React.Component {
 
 
 const mapStateToProps = (state, ownProps) => {
-
-  const sound = state.sounds.sounds.find(sound => sound.id === ownProps.match.params.soundId)
+  const sound = state.sounds.sounds.find(sound => sound.id == ownProps.match.params.soundId)
   if (sound) {
     return { sound }
   } else {
