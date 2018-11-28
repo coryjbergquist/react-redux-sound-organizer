@@ -13,7 +13,7 @@ class SoundsList extends React.Component {
 
   //adding a Sounds component for each sound in props
   renderSounds = this.props.stateSounds.sounds.map((sound) =>
-  <div>
+  <div key ={sound.id}>
     <Sound sound={sound} delete={this.props.deleteSound}/>
     </div>
   )

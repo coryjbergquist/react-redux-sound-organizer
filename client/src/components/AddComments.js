@@ -17,7 +17,7 @@ class AddComment extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const { addComment, history } = this.props;
+    const { history } = this.props;
     this.props.addComment({text: this.state.text, soundId: this.props.soundId });
     this.setState({
       text: '',
