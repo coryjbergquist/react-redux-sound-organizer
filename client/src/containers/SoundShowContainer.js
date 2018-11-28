@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import  SoundShow  from '../components/SoundShow';
 import {fetchComments} from '../actions/FetchComments'
 
-class SoundsPageContainer extends React.Component {
+class SoundShowContainer extends React.Component {
   constructor({sound}) {
-
     super({sound})
   }
   componentDidMount = () => {
@@ -41,4 +40,4 @@ const mapStateToProps = (state, ownProps) => {
   //const comments = state.sounds.comments
 }
 
-export default connect(mapStateToProps, {fetchComments})(SoundsPageContainer);
+export default connect(mapStateToProps, {fetchComments})(SoundShowContainer);
