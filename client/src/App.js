@@ -31,11 +31,14 @@ class App extends Component {
         <Router>
           <React.Fragment>
           <NavBar />
+          
           <Switch>
-            <Route path="/sounds" sounds ={this.props.sounds} component={SoundsListContainer} />
             <Route exact path="/sounds/new" component={AddSounds} />
             <Route exact path="/sounds/:soundId" component={SoundShowContainer} />
           </Switch>
+
+          <Route path="/sounds" sounds ={this.props.sounds} component={SoundsListContainer} />
+
           </React.Fragment>
         </Router>
         </div>

@@ -14,7 +14,10 @@ class Sound extends React.Component {
 
 onClick = () => {
   console.log("deleting!")
+  const { history } = this.props;
   this.props.delete(this.props.sound);
+  history.push("/")
+
 }
 
   render(){

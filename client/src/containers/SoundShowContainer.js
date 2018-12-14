@@ -4,9 +4,7 @@ import  SoundShow  from '../components/SoundShow';
 import {fetchComments} from '../actions/FetchComments'
 
 class SoundShowContainer extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+
   // componentDidMount = () => {
   //   this.props.fetchComments()
   // };
