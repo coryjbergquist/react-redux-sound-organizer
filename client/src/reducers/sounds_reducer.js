@@ -10,6 +10,7 @@ export default function soundsReducer(state= {
 
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':
+      console.log("loading sounds")
       return Object.assign({}, state, {loading: true})
 
       //fetch the sounds

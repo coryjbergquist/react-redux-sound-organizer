@@ -13,9 +13,8 @@ class Sound extends React.Component {
   }
 
 onClick = () => {
-  console.log(this.state.num)
-  this.setState({num: this.state.num + 1}
-  );
+  console.log("deleting!")
+  this.props.delete(this.props.sound);
 }
 
   render(){
@@ -25,9 +24,9 @@ onClick = () => {
 
       <Link key={this.props.sound.id} to={`/sounds/${this.props.sound.id}`} style={{ color: 'grey' }}>{this.props.sound.name}</Link>
       <p>
-      <button onClick={() => this.props.delete(this.props.sound)}>DELETE </button>
-        <button onClick={this.onClick}>LIKE </button>
-        {this.state.num}
+      <button onClick={this.onClick}>DELETE </button>
+
+
 
       </p>
     </li>
