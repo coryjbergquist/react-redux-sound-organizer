@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 // import CommentsListContainer from '../containers/CommentsListContainer'
 // import SoundsList from './SoundsList'
 
@@ -38,4 +39,4 @@ onClick = () => {
 };
 
 
-export default Sound;
+export default withRouter(Sound);
