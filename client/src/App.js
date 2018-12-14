@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 // import AddSounds from './components/AddSounds';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SoundsListContainer from './containers/SoundsListContainer';
 import NavBar from './components/NavBar'
 import { fetchSounds } from './actions/SoundActions'
 import { fetchComments } from './actions/FetchComments'
+import  AddSounds  from './components/AddSounds'
+import  SoundShowContainer  from './containers/SoundShowContainer'
 
 
 
@@ -29,13 +31,13 @@ class App extends Component {
         <Router>
           <React.Fragment>
           <NavBar />
+          <Switch>
             <Route path="/sounds" sounds ={this.props.sounds} component={SoundsListContainer} />
+            <Route exact path="/sounds/new" component={AddSounds} />
+            <Route exact path="/sounds/:soundId" component={SoundShowContainer} />
+          </Switch>
           </React.Fragment>
         </Router>
-        </div>
-
-        <div>
-          {/* add sounds used to be here */ }
         </div>
 
         </header>

@@ -8,10 +8,11 @@ const SoundShow = ({sound}) => {
 
   return(
     <div>
+    <h4> Here's more info on your sound! </h4>
 
-    <p> Sound Name: {sound.name} </p>
+    <p> Name: {sound.name} </p>
 
-    <p> Sound Description: {sound.description} </p>
+    <p> Description: {sound.description} </p>
 
     <div> <CommentsListContainer sound={sound}/> </div>
     </div>

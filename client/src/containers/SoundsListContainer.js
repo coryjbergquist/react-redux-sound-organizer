@@ -11,12 +11,6 @@ import {fetchComments } from '../actions/FetchComments'
 
 class SoundsListContainer extends React.Component {
 
-  componentDidMount() {
-   this.props.fetchSounds()
-   this.props.fetchComments()
-  }
-
-
   render() {
     return (
       <div>
