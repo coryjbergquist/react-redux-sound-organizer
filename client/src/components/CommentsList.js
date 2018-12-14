@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentsList = (props) => {
 
-  const myComments = props.comments.comments[0]
+  const myComments = props.comments
 
   let associatedComments = myComments.filter(comment => props.soundId === parseInt(comment.sound_id))
 

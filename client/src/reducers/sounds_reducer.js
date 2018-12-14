@@ -7,7 +7,7 @@ export default function soundsReducer(state= {
   loading: false,
 }, action) {
   switch ( action.type ) {
-    
+
       //creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':
       return Object.assign({}, state, {loading: true})
@@ -66,10 +66,9 @@ export default function soundsReducer(state= {
         return Object.assign({}, state, {loading: true})
 
       case 'FETCH_COMMENTS':
-        return { loading: false, ...state, comments: [...state.comments, action.payload]}
+        return { loading: false, ...state, comments: action.payload}
 
       case 'DELETE_COMMENT_START':
-
         return {
           ...state, loading: true,
         }

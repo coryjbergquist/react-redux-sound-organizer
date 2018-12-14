@@ -36,7 +36,7 @@ class CommentsListContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({comments: state.sounds})
+const mapStateToProps = state => ({comments: state.sounds.comments})
 
 
 // const mapDispatchToProps = dispatch => {

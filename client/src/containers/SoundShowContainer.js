@@ -7,9 +7,9 @@ class SoundShowContainer extends React.Component {
   constructor(props) {
     super(props)
   }
-  componentDidMount = () => {
-    this.props.fetchComments()
-  };
+  // componentDidMount = () => {
+  //   this.props.fetchComments()
+  // };
 
 
   render() {
