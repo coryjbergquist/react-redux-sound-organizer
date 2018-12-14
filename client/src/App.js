@@ -29,7 +29,7 @@ class App extends Component {
         <Router>
           <React.Fragment>
           <NavBar />
-            <Route path="/sounds" component={SoundsListContainer} />
+            <Route path="/sounds" sounds ={this.props.sounds} component={SoundsListContainer} />
           </React.Fragment>
         </Router>
         </div>

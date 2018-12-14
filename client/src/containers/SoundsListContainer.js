@@ -32,7 +32,7 @@ class SoundsListContainer extends React.Component {
 
 }
 
-const mapStateToProps = state => ({sounds: state.sounds})
+const mapStateToProps = state => ({sounds: state.sounds.sounds})
 
 // const mapDispatchToProps = dispatch => {
 //   return {
