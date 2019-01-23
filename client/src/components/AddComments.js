@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {addComment} from '../actions/AddComments'
+import { withRouter } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class AddComment extends Component {
@@ -57,4 +58,5 @@ class AddComment extends Component {
 //   addComment: commentData => dispatch({ type: 'ADD_COMMENT', payload: commentData })
 // })
 
+//need to export with connect and withRouter
 export default connect(null, {addComment})(AddComment);

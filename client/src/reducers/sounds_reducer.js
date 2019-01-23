@@ -70,6 +70,7 @@ export default function soundsReducer(state= {
         return { loading: false, ...state, comments: action.payload}
 
       case 'DELETE_COMMENT_START':
+        console.log("deleting comment")
         return {
           ...state, loading: true,
         }
