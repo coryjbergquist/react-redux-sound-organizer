@@ -13,16 +13,3 @@ console.log(`commentId: ${commentId}`)
 
   }
 }
-
-
-// case 'DELETE_COMMENT_START':
-//   console.log("deleting comment")
-//   return {
-//     ...state, loading: true,
-//   }
-//
-//   case 'DELETE_COMMENT_SUCCESS':
-//
-//     return {
-//       loading: false, ...state, comments: action.payload
-//     }
