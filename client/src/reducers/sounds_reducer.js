@@ -64,9 +64,10 @@ export default function soundsReducer(state= {
       }
 
       case 'LOADING_COMMENTS':
-        return Object.assign({}, state, {loading: true})
+        return { loading: true, ...state }
 
       case 'FETCH_COMMENTS':
+      console.log("comments have been fetched")
         return { loading: false, ...state, comments: action.payload}
 
       case 'DELETE_COMMENT_START':

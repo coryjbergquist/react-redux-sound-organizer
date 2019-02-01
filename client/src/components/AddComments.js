@@ -23,19 +23,19 @@ class AddComment extends Component {
     this.setState({
       text: '',
     });
-    history.push("/")
+    // history.push("/")
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
-    const { history } = this.props;
-    this.props.addSound(this.state)
-    this.setState({
-      name: "",
-      description: "",
-    });
-    history.push("/")
-  }
+  // handleSubmit = event => {
+  //   event.preventDefault();
+  //   const { history } = this.props;
+  //   this.props.addSound(this.state)
+  //   this.setState({
+  //     name: "",
+  //     description: "",
+  //   });
+  //   history.push("/")
+  // }
 
 
   render() {

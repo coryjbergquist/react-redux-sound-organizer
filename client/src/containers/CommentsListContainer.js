@@ -13,7 +13,6 @@ class CommentsListContainer extends React.Component {
   // }
 
   render() {
-
     return (
 
       <div>
@@ -50,7 +49,7 @@ const bindActionsToDispatch = dispatch =>
 (
   {
     fetchComments : () => dispatch(fetchComments()),
-    deleteComment : () => dispatch(deleteComment())
+    // deleteComment : () => dispatch(deleteComment())
   }
 );
 
