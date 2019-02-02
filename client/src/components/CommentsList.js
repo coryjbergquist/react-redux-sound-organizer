@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteComment }from '../actions/DeleteComment'
+import { withRouter } from "react-router";
+
 
 
 class CommentsList extends React.Component {
 
   deleteComment = (e) => {
     console.log("deleting comment!")
-    // const { history } = this.props;
     this.props.deleteComment(e);
+    this.props.history.push("/")
   }
 
   associatedComments = this.props.comments.filter(comment => this.props.soundId === parseInt(comment.sound_id))
@@ -24,6 +26,7 @@ class CommentsList extends React.Component {
   )
 
   render() {
+    console.log(this.props.history)
     return (
       <div>
         {this.commentList}
@@ -31,4 +34,4 @@ class CommentsList extends React.Component {
     );
   }
 };
-export default connect(null, {deleteComment})(CommentsList);
+export default withRouter(connect(null, {deleteComment})(CommentsList));
