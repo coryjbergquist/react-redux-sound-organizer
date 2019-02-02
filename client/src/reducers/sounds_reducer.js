@@ -60,7 +60,7 @@ export default function soundsReducer(state= {
 
       console.log(`Successfully added comment! ${comment.text}`)
       return {
-        loading: false, ...state, comments: [...state.comments, comment]
+        loading: false, ...state, comments: [...state.comments, action.payload]
       }
 
       case 'LOADING_COMMENTS':
