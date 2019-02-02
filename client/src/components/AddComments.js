@@ -23,7 +23,7 @@ class AddComment extends Component {
     this.setState({
       text: '',
     });
-    // history.push("/")
+    history.push("/")
   }
 
   // handleSubmit = event => {
@@ -59,4 +59,4 @@ class AddComment extends Component {
 // })
 
 //need to export with connect and withRouter
-export default connect(null, {addComment})(AddComment);
+export default withRouter(connect(null, {addComment})(AddComment));

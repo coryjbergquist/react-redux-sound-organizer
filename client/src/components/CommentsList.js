@@ -26,7 +26,6 @@ class CommentsList extends React.Component {
   )
 
   render() {
-    console.log(this.props.history)
     return (
       <div>
         {this.commentList}
