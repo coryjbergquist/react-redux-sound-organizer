@@ -24,6 +24,4 @@ class SoundsList extends React.Component {
   }
 }
 
-// const mapStateToProps = state => ({stateSounds: state.sounds})
-
 export default connect(null, {deleteSound})(SoundsList);

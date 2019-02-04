@@ -10,7 +10,7 @@ class CommentsList extends React.Component {
   deleteComment = (e) => {
     console.log("deleting comment!")
     this.props.deleteComment(e);
-    this.props.history.push("/")
+    this.props.history.push("/sounds")
   }
 
   associatedComments = this.props.comments.filter(comment => this.props.soundId === parseInt(comment.sound_id))
