@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SoundsList from '../components/SoundsList';
-
-import { fetchSounds } from '../actions/SoundActions'
-import { deleteSound } from '../actions/DeleteSound'
-import {fetchComments } from '../actions/FetchComments'
+import { Route } from 'react-router-dom';
+import { fetchSounds } from '../actions/SoundActions';
+import { deleteSound } from '../actions/DeleteSound';
+import {fetchComments } from '../actions/FetchComments';
 
 
 class SoundsListContainer extends React.Component {

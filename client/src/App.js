@@ -30,11 +30,12 @@ class App extends Component {
           <p>Welcome to this Sound Organizer</p>
         <Router>
           <React.Fragment>
-          <NavBar />
+             <NavBar />
 
           <Switch>
             <Route exact path="/sounds" sounds ={this.props.sounds} component={SoundsListContainer} />
             <Route exact path="/sounds/new" component={AddSounds} />
+            //maybe put sounds show container in SoundsListContainer for proper nesting
             <Route exact path="/sounds/:soundId" component={SoundShowContainer} />
           </Switch>
 

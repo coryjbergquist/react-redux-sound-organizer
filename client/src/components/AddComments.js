@@ -26,18 +26,6 @@ class AddComment extends Component {
     history.push("/")
   }
 
-  // handleSubmit = event => {
-  //   event.preventDefault();
-  //   const { history } = this.props;
-  //   this.props.addSound(this.state)
-  //   this.setState({
-  //     name: "",
-  //     description: "",
-  //   });
-  //   history.push("/")
-  // }
-
-
   render() {
     return (
      <div>
@@ -58,5 +46,4 @@ class AddComment extends Component {
 //   addComment: commentData => dispatch({ type: 'ADD_COMMENT', payload: commentData })
 // })
 
-//need to export with connect and withRouter
 export default withRouter(connect(null, {addComment})(AddComment));
