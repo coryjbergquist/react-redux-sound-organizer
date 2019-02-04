@@ -10,25 +10,29 @@ class CommentsList extends React.Component {
   deleteComment = (e) => {
     console.log("deleting comment!")
     this.props.deleteComment(e);
-    this.props.history.push("/sounds")
+    this.props.history.push(`/sounds/${this.props.soundId}`)
   }
 
-  associatedComments = this.props.comments.filter(comment => this.props.soundId === parseInt(comment.sound_id))
+  associatedComments = (comments) => {
+    return comments.filter(comment => this.props.soundId === parseInt(comment.sound_id))
+  }
 
-  commentList = this.associatedComments.map(comment =>
-
-    <li key={comment.id}>{comment.text}
-
-      <p>
-        <button onClick={() => this.deleteComment(comment.id)}>DELETE</button>
-      </p>
-    </li>
-  )
+  commentList = (comments) => {
+    return(
+      comments.map(comment =>
+        <li key={comment.id}>{comment.text}
+          <p>
+            <button onClick={() => this.deleteComment(comment)}>DELETE</button>
+          </p>
+        </li>
+      )
+    )
+  }
 
   render() {
     return (
       <div>
-        {this.commentList}
+        {this.commentList(this.associatedComments(this.props.comments))}
       </div>
     );
   }

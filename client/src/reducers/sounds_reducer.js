@@ -8,15 +8,15 @@ export default function soundsReducer(state= {
 }, action) {
   switch ( action.type ) {
 
-      //creating loading bar to show when loading sounds until complete
+      // for creating loading bar to show when loading sounds until complete
     case 'LOADING_SOUNDS':
       console.log("loading sounds")
       return Object.assign({}, state, {loading: true})
 
-      //fetch the sounds
     case 'FETCH_SOUNDS':
         return { loading: false, ...state, sounds: action.payload}
 
+      //for creating "loading" bar
     case 'ADD_SOUND_STARTED':
       console.log("started to add sound")
       return {
@@ -43,7 +43,6 @@ export default function soundsReducer(state= {
       }
 
     case 'DELETE_SOUND_SUCCESS':
-
       return {
         loading: false, ...state, sounds: action.payload
       }

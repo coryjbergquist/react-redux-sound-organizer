@@ -17,7 +17,7 @@ onClick = () => {
   console.log("deleting sound!")
   const { history } = this.props;
   this.props.delete(this.props.sound);
-  history.push("/")
+  history.push("/sounds")
 
 }
 

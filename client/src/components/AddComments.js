@@ -23,7 +23,7 @@ class AddComment extends Component {
     this.setState({
       text: '',
     });
-    history.push(`/sounds`)
+    history.push(`/sounds/${this.props.soundId}`)
   }
 
   render() {

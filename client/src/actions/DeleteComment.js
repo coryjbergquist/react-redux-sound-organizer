@@ -1,11 +1,11 @@
 // import axios from 'axios';
 
-export const deleteComment = (commentId) => {
-console.log(`commentId: ${commentId}`)
+export const deleteComment = (comment) => {
+console.log(`commentId: ${comment.id}`)
   return dispatch => {
     dispatch({type: 'DELETE_COMMENT_START'});
 
-    fetch('/comments/' + commentId, {
+    fetch('/comments/' + comment.id, {
        method: 'DELETE',
     })
       .then(response => response.json())
