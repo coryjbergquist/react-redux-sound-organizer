@@ -21,14 +21,6 @@ Start your PostreSQL server, then start the application with "rake start" in you
 6. Run "rake start" to start the front end and back end servers.
 7. View current sounds and add sounds by clicking the "Sounds" or "Add Sound" links.
 
-# CONTRIBUTIONS
-
-Bug reports and pull requests are welcome at https://github.com/coryjbergquist/react-redux-sound-organizer
-
 # LICENSE
 
  This project has been licensed under the MIT open source license: https://github.com/coryjbergquist/react-redux-sound-organizer/blob/master/LICENSE
-
-## To learn more about Create React App and it's functions:
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
