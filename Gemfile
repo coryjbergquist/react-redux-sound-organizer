@@ -9,7 +9,7 @@ gem 'rails', '~> 5.2.1'
 # gem 'sqlite3'
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'pry'
 
 #Foreman is a utility for managing multiple processes. We'll see how it works by implementing it.
